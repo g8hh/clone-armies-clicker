@@ -35,12 +35,12 @@ var cadetCPS = 10;
 var privateUpgrade = false
 
 function loadSave() { //loads the saved values from local storage
-	if(localStorage.linesofcode) { //checks for a local save
-		savedPoints = localStorage.linesofcode;
-		points = parseInt(savedPoints); clickStr = parseInt(localStorage.clickStr); clickCost = parseInt(localStorage.clickCost);
-		loadDavids();
-		loadIzzys();
-		loadNicoles();
+	if(localStorage.bluecoins) { //checks for a local save
+		savedCoins = localStorage.bluecoins;
+		coins = parseInt(savedCoins); clickStr = parseInt(localStorage.clickStr); clickCost = parseInt(localStorage.clickCost);
+		loadPrivates();
+		loadCommandos();
+		loadCadets();
 	}
 	else {
 
