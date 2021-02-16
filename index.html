@@ -1,1 +1,71 @@
-
+<html>
+<head>
+<script src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Clone Armies Clicker</title>
+</head>
+<body onload="loadSave()">
+<div class="tabs">
+<button class="tablinks" onclick="openTab(event, 'Generator')">
+Generator
+</button>
+<button class="tablinks" onclick="openTab(event, 'Clones')">
+Clones
+</button>
+<button class="tablinks" onclick="openTab(event, 'Upgrades');checkUpgrades()">
+Upgrades
+</button>
+<button class="tablinks" onclick="openTab(event, 'Options')">
+Options
+</button>
+</div>
+<div id="Generator" class="tabcontent">
+<p id="coins">0 Blue Coins</p>
+<p id="coinspersec">0 Blue Coins per second</p>
+<button id="click" onmouseup="addCoins()">Generate Blue Coins!</button>
+</div>
+<div id="Clones" class="tabcontent">
+<p id="coins2">0 Blue Coins</p>
+<p id="coinspersec2">0 Blue Coins per second</p>
+<button id="private" onclick="buyPrivate()">Clone Private for 10 Blue Coins</button>
+<p id="privateAmount">You cloned 0 Privates</p>
+<p id="privateProduce">Earning 0 Blue Coins per second</p>
+<br>
+<button id="commando" onclick="buyCommando()">Clone Commando for 25 Blue Coins</button>
+<p id="commandoAmount">You cloned 0 Commandos</p>
+<p id="commandoProduce">Earning 0 Blue Coins per second</p>
+<br>
+<button id="cadet" onclick="buyCadet()">Clone Cadet for 100 Blue Coins</button>
+<p id="cadetAmount">You cloned 0 Cadets</p>
+<p id="cadetProduce">Earning 0 Blue Coins per second</p>
+<br>
+<button id="infantry" onclick="buyInfantry()">Clone Infantry for 500 Blue Coins</button>
+<p id="infantryAmount">You cloned 0 Infantrymen</p>
+<p id="infantryProduce">Earning 0 Blue Coins per second</p>
+<br>
+</div>
+<div id="Upgrades" class="tabcontent">
+<div id="clickUpgrades" class="upgrades">
+				<div id="clickStrength">
+					<button id="buyClickUpgrade" class="clickStrength" onclick="clickHarder()">Doubles your click power</button>
+					<p id="clickCostDisplay" class="clickStrength"></p>
+				</div>
+			</div>
+			<div id="privateUpgrades" class="upgrades">
+				<div id="privateUpgrade">
+					<button id="upPrivate" class="privateUpgrade" onclick="privateUpgrade()">Upgrade Private for 1,000 Blue Coins</button>
+					<p class="privateUpgrade">Privates will make twice the blue coins.</p>
+				</div>
+			</div>
+		</div>
+		<div id="Options" class="tabcontent">
+			<div id="mainOptions">
+				<button id="reset" class="resetGame" onclick="resetGame()"> Reset everything in the game </button>
+				<p>Quite risky to do, but it's worth the catch!</p>
+				<p>Most useless function I've made straightforwardly. It makes the game refresh faster, not speedup the whole game</p>
+				<input type="number" id="refreshRate" value=100>
+				<button onclick="refreshRate()">Update rate</button>
+			</div>
+		</div>
+	</body>
+</html>
