@@ -45,7 +45,7 @@
         bluecoincount = bluecoincount + infantry*40*multiplier;
         bluecoincount = bluecoincount + marksman*100*multiplier;
         bluecoincount = bluecoincount + rookie*300*multiplier;
-        update()
+        update();
     }
     setInterval(timer, 1000)
 </script>
@@ -153,7 +153,6 @@
         if (bluecoincount >= ((private+1) * 10)) {
             bluecoincount = bluecoincount - ((private+1) * 10);
             private = private + 1;
-            update()
         }
     }
         
@@ -161,7 +160,6 @@
         if (bluecoincount >= ((commando+1) * 25)) {
             bluecoincount = bluecoincount - ((commando+1) * 25);
             commando = commando + 1;
-            update()
         }
     }
       
@@ -169,7 +167,6 @@
         if (bluecoincount >= ((cadet+1) * 100)) {
             bluecoincount = bluecoincount - ((cadet+1) * 100);
             cadet = cadet + 1;
-            update()
         }
     }
       
@@ -177,7 +174,6 @@
         if (bluecoincount >= ((infantry+1) * 500)) {
             bluecoincount = bluecoincount - ((infantry+1) * 500);
             infantry = infantry + 1;
-            update()
         }
     }
       
@@ -185,7 +181,6 @@
         if (bluecoincount >= ((marksman+1) * 2000)) {
             bluecoincount = bluecoincount - ((marksman+1) * 2000);
             marksman = marksman + 1;
-            update()
         }
     }
       
@@ -193,7 +188,6 @@
         if (bluecoincount >= ((rookie+1) * 8000)) {
             bluecoincount = bluecoincount - ((rookie+1) * 8000);
             rookie = rookie + 1;
-            update()
         }
     }
     
@@ -201,7 +195,6 @@
         if (bluecoincount >= ((multiplier+1) * 10000)) {
             bluecoincount = bluecoincount - ((multiplier+1) * 5000);
             multiplier = multiplier + 1;
-            update()
         }
     }
     </script>
