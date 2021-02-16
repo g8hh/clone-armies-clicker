@@ -32,8 +32,7 @@ var commandoTotal = 0;
 var commandoCPS = 5;
 var cadetPrice = 100;
 var cadetTotal = 0;
-var cadetCPS = 10;
-var privateUpgrade = false
+var cadetCPS = 10
 
 function loadSave() { //loads the saved values from local storage
 	if(localStorage.bluecoins) { //checks for a local save
@@ -52,11 +51,6 @@ function loadPrivates() { //loads privates when loading the game
 	savedPrivates = localStorage.privates;
 	privateTotal = parseInt(savedPrivates);
 	privatePrice = Math.ceil(10 * 1.1**privateTotal);
-	privateUpgrade = (localStorage.privateUpgrade == 'true');
-	console.log(privateUpgrade)
-	if(privateUpgrade){
-		privateCPS = privateCPS * 2;
-	}
 	document.getElementById("private").innerHTML = 'Clone Private for ' + privatePrice + ' Blue Coins';
 	document.getElementById("privateAmount").innerHTML = 'You cloned ' + privateTotal + ' Privates';
 	document.getElementById("privateProduce").innerHTML = 'Earning ' + (privateCPS * privateTotal).toFixed(1) + ' Blue Coins per second';
@@ -122,7 +116,7 @@ function buyCadet() { //function for cloning more cadets
 window.setInterval(function() { //Adds together all the Lines of Code and then updates the elements in the HTML
 	  coins = (coins + (privateTotal * privateCPS) + (commandoTotal * commandoCPS) + (cadetTotal * cadetCPS));
 		totalCPS = ((privateTotal * privateCPS) + (commandoTotal * commandoCPS) + (cadetTotal * cadetCPS));
-		document.getElementById("coinspersec").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second':
+		document.getElementById("coinspersec").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second'
 		document.getElementById("coins").innerHTML = coins.toFixed(1) + ' Blue Coins';
 		document.cookie = "coins=" + coins.toFixed(1);
 }, 1000); // dont change this to anything other than 1000 lol
@@ -139,48 +133,6 @@ window.setInterval(function() { //Saves game data every 15 seconds
 	console.log("Game Saved");
 }, 15000);
 
-
-/*
-----This section represents the Upgrades page of the javascript----
-*/
-function checkUpgrades() {
-	console.log(privateUpgrade);
-	if(privateTotal >= 1 && privateUpgrade != true) {
-		var privateUpgradeElements = document.getElementsByClassName("privateUpgrade");
-		for (i = 0; i < privateUpgradeElements.length; i++){
-			privateUpgradeElements[i].style.display = "inline";
-		}
-	}
-}
-
-function upgradePrivate() {
-	var privateUpgradeCost = 1000
-	if(coins >= privateUpgradeCost) {
-		coins = coins - privateUpgradeCost;
-		privateUpgrade = true;
-		localStorage.setItem("privateUpgrade", true);
-		privateCPS = privateCPS * 2;
-		var privateUpgradeElements = document.getElementsByClassName("privateUpgrade");
-		for (i = 0; i < privateUpgradeElements.length; i++){
-			privateUpgradeElements[i].style.display = "none";
-		}
-	}
-}
-
-function clickHarder() { // Upgrade click ability
-
-	if (coins >= clickCost) {
-    coins = coins - clickCost;
-		clickStr = clickStr * 2;
-		clickCost = clickCost* 3;
-		localStorage.setItem("clickStr", clickStr); localStorage.setItem("clickCost", clickCost);
-		document.getElementById("clickCostDisplay").innerHTML = "Current level: " + clickStr.toFixed(1) + " Cost for next level: " + clickCost.toFixed(1);
-	}
-}
-
-/*
-	This section represents the functions for the options tab
-*/
 
 function resetGame() {
 	if(confirm("Do you want to reset the game?")){
@@ -209,8 +161,7 @@ function resetVariables(){
 	var commandoCPS = 5;
 	var cadetPrice = 100;
 	var cadetTotal = 0;
-	var cadetCPS = 10;
-	var privateUpgrade = false
+	var cadetCPS = 10
 }
 
 function refreshRate() {
