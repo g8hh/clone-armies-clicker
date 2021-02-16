@@ -23,6 +23,7 @@ var coinstext = document.getElementById("coins");
 var clickStr = 1;
 var clickCost = 10;
 var refreshRateVar = 100;
+var cloneSound = new Audio("buy.wav");
 var privatePrice = 10;
 var privateTotal = 0;
 var privateCPS = 1;
@@ -92,7 +93,7 @@ function buyPrivate() { //function for cloning more privates
 		privatePrice = Math.ceil(10 * 1.1**privateTotal);
 		document.getElementById("private").innerHTML = 'Clone Private for ' + privatePrice + ' Blue Coins';
 		document.getElementById("privateAmount").innerHTML = 'You cloned ' + privateTotal + ' Privates';
-    document.getElementById("privateProduce").innerHTML = 'Earning ' + (privateCPS * privateTotal).toFixed(1) + ' Blue Coins per second';
+                document.getElementById("privateProduce").innerHTML = 'Earning ' + (privateCPS * privateTotal).toFixed(1) + ' Blue Coins per second';
 	}
 }
 
@@ -199,6 +200,7 @@ function resetVariables(){
 	var clickStr = 1;
 	var clickCost = 10;
 	var refreshRateVar = 100;
+	var cloneSound = new Audio("buy.wav");
 	var privatePrice = 10;
 	var privateTotal = 0;
 	var privateCPS = 1;
