@@ -1,7 +1,7 @@
 <script>
     function update() {
         document.getElementById('text').value = bluecoincount;
-        document.title = bluecoincount + "Blue Coins";
+        document.title = bluecoincount + " Blue Coins";
         
         document.getElementById('ammountMultiplier').innerHTML = "Multiplier Upgrade x" + (multiplier+1);
         document.getElementById('ammountMultiplier2').innerHTML = "x" + (multiplier+1);
@@ -159,7 +159,7 @@
         
     function buyCommando() {
         if (bluecoincount >= ((commando+1) * 25)) {
-            bluecoincount = bluecoincount - ((commando+1) * 30);
+            bluecoincount = bluecoincount - ((commando+1) * 25);
             commando = commando + 1;
             update()
         }
@@ -167,7 +167,7 @@
       
     function buyCadet() {
         if (bluecoincount >= ((cadet+1) * 100)) {
-            bluecoincount = bluecoincount - ((cadet+1) * 25);
+            bluecoincount = bluecoincount - ((cadet+1) * 100);
             cadet = cadet + 1;
             update()
         }
@@ -175,7 +175,7 @@
       
     function buyInfantry() {
         if (bluecoincount >= ((infantry+1) * 500)) {
-            bluecoincount = bluecoincount - ((infantry+1) * 20);
+            bluecoincount = bluecoincount - ((infantry+1) * 500);
             infantry = infantry + 1;
             update()
         }
@@ -183,7 +183,7 @@
       
     function buyMarksman() {
         if (bluecoincount >= ((marksman+1) * 2000)) {
-            bluecoincount = bluecoincount - ((marksman+1) * 17.5);
+            bluecoincount = bluecoincount - ((marksman+1) * 2000);
             marksman = marksman + 1;
             update()
         }
@@ -191,7 +191,7 @@
       
     function buyRookie() {
         if (bluecoincount >= ((rookie+1) * 8000)) {
-            bluecoincount = bluecoincount - ((rookie+1) * 15);
+            bluecoincount = bluecoincount - ((rookie+1) * 8000);
             rookie = rookie + 1;
             update()
         }
@@ -199,7 +199,7 @@
     
     function buyMultiplier() {
         if (bluecoincount >= ((multiplier+1) * 10000)) {
-            bluecoincount = bluecoincount - ((multiplier+1) * 5);
+            bluecoincount = bluecoincount - ((multiplier+1) * 5000);
             multiplier = multiplier + 1;
             update()
         }
