@@ -50,11 +50,11 @@ function loadSave() { //loads the saved values from local storage
 function loadPrivates() { //loads privates when loading the game
 	savedPrivates = localStorage.privates;
 	privateTotal = parseInt(savedPrivates);
-	davidPrice = Math.ceil(10 * 1.1**privateTotal);
-	davidredbullUpgrade = (localStorage.davidredbull == 'true');
-	console.log(davidredbullUpgrade)
-	if(davidredbullUpgrade){
-		davidLPS = davidLPS * 2;
+	privatePrice = Math.ceil(10 * 1.1**privateTotal);
+	privateUpgrade = (localStorage.privateUpgrade == 'true');
+	console.log(privateUpgrade)
+	if(privateUpgrade){
+		privateCPS = privateCPS * 2;
 	}
 	document.getElementById("private").innerHTML = 'Clone Private for ' + privatePrice + ' Blue Coins';
 	document.getElementById("privateAmount").innerHTML = 'You cloned ' + privateTotal + ' Privates';
