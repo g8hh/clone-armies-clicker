@@ -79,10 +79,10 @@ function loadCadets() { //loads cadets when loading the game
 	document.getElementById("cadetProduce").innerHTML = 'Earning ' + (cadetCPS * cadetTotal).toFixed(1) + ' Blue Coins per second';
 }
 
-function addPoints() { //function for clicking
-	points = points + clickStr;
-	//console.log(getCookie("points"))l;
-	document.getElementById("points").innerHTML = points.toFixed(1) + ' Lines of code';
+function addCoins() { //function for clicking
+	coins = coins + clickStr;
+	//console.log(getCookie("coins"))l;
+	document.getElementById("coins").innerHTML = coins.toFixed(1) + ' Blue Coins';
 }
 
 function buyPrivate() { //function for cloning more privates
@@ -121,10 +121,10 @@ function buyCadet() { //function for cloning more cadets
 window.setInterval(function() { //Adds together all the Lines of Code and then updates the elements in the HTML
 	  coins = (coins + (privateTotal * privateCPS) + (commandoTotal * commandoCPS) + (cadetTotal * cadetCPS));
 		totalCPS = ((privateTotal * privateCPS) + (commandoTotal * commandoCPS) + (cadetTotal * cadetCPS));
-		document.getElementById("coinspersec").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second'
-    document.getElementById("coinspersec2").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second'
+		document.getElementById("coinspersec").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second':
+                document.getElementById("coinspersec2").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second':
 		document.getElementById("coins").innerHTML = coins.toFixed(1) + ' Blue Coins';
-    document.getElementById("coins2").innerHTML = coins.toFixed(1) + ' Blue Coins';
+                document.getElementById("coins2").innerHTML = coins.toFixed(1) + ' Blue Coins';
 		document.cookie = "coins=" + coins.toFixed(1);
 }, 1000); // dont change this to anything other than 1000 lol
 
