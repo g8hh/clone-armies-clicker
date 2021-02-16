@@ -6,8 +6,6 @@
 </head>
 <body onload="loadSave()">
 <div class="tabs">
-<button class="tablinks" onclick="openTab(event, 'Generator')">
-Generator
 </button>
 <button class="tablinks" onclick="openTab(event, 'Clones')">
 Clones
@@ -19,14 +17,11 @@ Upgrades
 Options
 </button>
 </div>
-<div id="Generator" class="tabcontent">
+<div id="Clones" class="tabcontent">
 <p id="coins">0 Blue Coins</p>
 <p id="coinspersec">0 Blue Coins per second</p>
 <button id="click" onmouseup="addCoins()">Generate Blue Coins!</button>
-</div>
-<div id="Clones" class="tabcontent">
-<p id="coins2">0 Blue Coins</p>
-<p id="coinspersec2">0 Blue Coins per second</p>
+<br>
 <button id="private" onclick="buyPrivate()">Clone Private for 10 Blue Coins</button>
 <p id="privateAmount">You cloned 0 Privates</p>
 <p id="privateProduce">Earning 0 Blue Coins per second</p>
