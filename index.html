@@ -55,7 +55,8 @@
 
     <p id="coinspersecond">You are gaining 0 Blue Coins per/s</p>
     
-    <a href=# onclick="add()"><img src="Generator.png"></a>
+    
+    <img src="Generator.png" onclick="add()">
     <br><br>
     You got: 
     <input type="text" id="text" disabled style= text-align:center value=0>
@@ -79,42 +80,42 @@
     <br>
     
     <p>Clone Private</p>
-    <button><a href="#" onClick="buyPrivate()"><img src=Private.png width="50px" height="50px"></a></button>
+    <img src="Private.png" width="50px" height="50px" onClick="buyPrivate()">
     <p id="privateCost">10 Blue Coins</p>
     <p id="privateAmount">You Cloned 0 Privates</p>
     
     <br>
     
     <p>Clone Commando</p>
-    <button><a href="#" onClick="buyCommando()"><img src="Commando.png" width="50px" height="50px"></a></button>
+    <img src="Commando.png" width="50px" height="50px" onClick="buyCommando()">
     <p id="commandoCost">25 Blue Coins</p>
     <p id="commandoAmount">You Cloned 0 Commandos</p>
   
     <br>
     
     <p>Clone Cadet</p>
-    <button><a href="#" onClick="buyCadet()"><img src="Cadet.jpg" width="50px" height="50px"></a></button>
+    <img src="Cadet.jpg" width="50px" height="50px" onClick="buyCadet()">
     <p id="cadetCost">100 Blue Coins</p>
     <p id="cadetAmount">You Cloned 0 Cadets</p>
   
     <br>
     
     <p>Clone Infantry</p>
-    <button><a href="#" onClick="buyInfantry()"><img src="Infantry.png" width="50px" height="50px"></a></button>
+    <img src="Infantry.png" width="50px" height="50px" onClick="buyInfantry()">
     <p id="infantryCost">500 Blue Coins</p>
     <p id="infantryAmount">You Cloned 0 Infantrymen</p>
   
     <br>
     
     <p>Clone Marksman</p>
-    <button><a href="#" onClick="buyMarksman()"><img src="Marksman.jpg" width="50px" height="50px"></a></button>
+    <img src="Marksman.jpg" width="50px" height="50px" onClick="buyMarksman()">
     <p id="marksmanCost">2,000 Blue Coins</p>
     <p id="marksmanAmount">You Cloned 0 Marksmen</p>
   
     <br>
     
     <p>Clone Rookie</p>
-    <button><a href="#" onClick="buyRookie()"><img src="Rookie.jpg" width="50px" height="50px"></a></button>
+    <img src="Rookie.jpg" width="50px" height="50px" onClick="buyRookie()">
     <p id="rookieCost">8,000 Blue Coins</p>
     <p id="rookieAmount">You Cloned 0 Rookies</p>
     
@@ -151,36 +152,41 @@
         
     function buyPrivate() {
         if (bluecoincount >= ((private+1) * 10)) {
-            bluecoincount = bluecoincount - ((private+1) * 10);
+            bluecoincount = Math.ceil(1.1**private);
             private = private + 1;
+            update()
         }
     }
         
     function buyCommando() {
         if (bluecoincount >= ((commando+1) * 25)) {
-            bluecoincount = bluecoincount - ((commando+1) * 25);
+            bluecoincount = Math.ceil(1.3**commando);
             commando = commando + 1;
+            update()
         }
     }
       
     function buyCadet() {
         if (bluecoincount >= ((cadet+1) * 100)) {
-            bluecoincount = bluecoincount - ((cadet+1) * 100);
+            bluecoincount = Math.ceil(1.25**cadet);
             cadet = cadet + 1;
+            update()
         }
     }
       
     function buyInfantry() {
         if (bluecoincount >= ((infantry+1) * 500)) {
-            bluecoincount = bluecoincount - ((infantry+1) * 500);
+            bluecoincount = Math.ceil(1.2**infantry);
             infantry = infantry + 1;
+            update()
         }
     }
       
     function buyMarksman() {
         if (bluecoincount >= ((marksman+1) * 2000)) {
-            bluecoincount = bluecoincount - ((marksman+1) * 2000);
+            bluecoincount = Math.ceil(1.175**marksman);
             marksman = marksman + 1;
+            update()
         }
     }
       
@@ -188,13 +194,15 @@
         if (bluecoincount >= ((rookie+1) * 8000)) {
             bluecoincount = bluecoincount - ((rookie+1) * 8000);
             rookie = rookie + 1;
+            update()
         }
     }
     
     function buyMultiplier() {
         if (bluecoincount >= ((multiplier+1) * 10000)) {
-            bluecoincount = bluecoincount - ((multiplier+1) * 5000);
+            bluecoincount = bluecoincount - ((multiplier+1) * 20000);
             multiplier = multiplier + 1;
+            update()
         }
     }
     </script>
