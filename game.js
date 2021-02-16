@@ -54,19 +54,19 @@ class Building {
         let multiplier = 1;
         let buildingCount = game.utilities.getBuildingCount();
         this.specialCPS = 0;
-        if (this.name == 'Cursor') { game.player.aMPC = 1; }
+        if (this.name == 'Private') { game.player.aMPC = 1; }
         this.upgrades.forEach(upgrade => {
             if (upgrade.owned == true) {
                 if (upgrade.special == false) {
                     multiplier *= 2;
-                    if (this.name == 'Cursor') {
+                    if (this.name == 'Private') {
                         player.aMPC *= 2;
                     }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for grandmas as well.
                     switch (this.name) {
-                        case 'Cursor':
+                        case 'Private':
                             let nonCursorBuildingCount = buildingCount - this.amount;
                             this.specialCPS += (upgrade.special * nonCursorBuildingCount) * this.amount;
                             player.aMPC += (upgrade.special * nonCursorBuildingCount);
@@ -99,7 +99,7 @@ class Building {
     generateBuyButtons() {
         let format = game.utilities.formatNumber;
         let html = '<div class="btnBuyGroup">';
-        html += `<button onclick="game.buyBuilding('${this.name}', 1);">Buy x1</br><b>${format(this.cost)}</b></button>`
+        html += `<button onclick="game.buyBuilding('${this.name}', 1);">Buy x1</br><b>${format(this.cost)}</b></button>`;
         html += `<button onclick="game.buyBuilding('${this.name}', 5);">Buy x5</br><b>${format(this.getCost(5))}</b></button>`;
         html += `<button onclick="game.buyBuilding('${this.name}', 10);">Buy x10</br><b>${format(this.getCost(10))}</b></button>`;
         html += `<button onclick="game.buyBuilding('${this.name}', 25);">Buy x25</br><b>${format(this.getCost(25))}</b></button>`:
@@ -133,7 +133,7 @@ class Building {
         if (this.specialCPS > 0) {
             singleEffect += (this.specialCPS / this.amount);
         }
-        let html = `<b>${this.name}</b></br>You have <b>${this.amount}</b> ${this.name.toLowerCase()}(s).</br>Each ${this.name.toLowerCase()} produces <b>${format(singleEffect)}</b> cookie(s).</br>All of your ${this.name.toLowerCase()}(s) combined produces <b>${format(this.effect)}</b> blue coin(s).</br>${this.generateBuyButtons()}</br>${this.generateUpgradeButtons()}`;
+        let html = `<b>${this.name}</b></br>You have <b>${this.amount}</b> ${this.name.toLowerCase()}(s).</br>Each ${this.name.toLowerCase()} produces <b>${format(singleEffect)}</b> blue coin(s).</br>All of your ${this.name.toLowerCase()}(s) combined produces <b>${format(this.effect)}</b> blue coin(s).</br>${this.generateBuyButtons()}</br>${this.generateUpgradeButtons()}`;
         return html;
     }
 }
