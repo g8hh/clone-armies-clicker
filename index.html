@@ -1,60 +1,209 @@
+<script>
+    function update() {
+        document.getElementById('text').value = bluecoincount;
+        document.title = bluecoincount + "Blue Coins";
+        
+        document.getElementById('ammountMultiplier').innerHTML = "Multiplier Upgrade x" + (multiplier+1);
+        document.getElementById('ammountMultiplier2').innerHTML = "x" + (multiplier+1);
+        document.getElementById('costMultiplier').innerHTML = ((multiplier+1) * 10000) + " Blue Coins";
+        document.getElementById('currentMultiplier').innerHTML = "Your current Multiplier is x" + (multiplier);
+        
+        document.getElementById('privateAmount').innerHTML = "You Cloned " + private + " Privates";
+        document.getElementById('privateCost').innerHTML = ((private+1) * 10) + " Blue Coins";
+        
+        document.getElementById('commandoAmount').innerHTML = "You Cloned " + commando + " Commandos";
+        document.getElementById('commandoCost').innerHTML = ((commando+1) * 25) + " Blue Coins";
+      
+        document.getElementById('cadetAmount').innerHTML = "You Cloned " + cadet + " Cadets";
+        document.getElementById('cadetCost').innerHTML = ((cadet+1) * 100) + " Blue Coins";
+      
+        document.getElementById('infantryAmount').innerHTML = "You Cloned " + infantry + " Infantrymen";
+        document.getElementById('infantryCost').innerHTML = ((infantry+1) * 500) + " Blue Coins";
+      
+        document.getElementById('marksmanAmount').innerHTML = "You Cloned " + marksman + " Marksmen";
+        document.getElementById('marksmanCost').innerHTML = ((marksman+1) * 2000) + " Blue Coins";
+      
+        document.getElementById('rookieAmount').innerHTML = "You Cloned " + rookie + " Rookies";
+        document.getElementById('rookieCost').innerHTML = ((rookie+1) * 8000) + " Blue Coins";
+        
+        document.getElementById('coinspersecond').innerHTML = "You are gaining " + (((private)+(commando*5)+(cadet*10)+(infantry*40)+(marksman*100)+(rookie*300))*multiplier) + " Blue Coins per/s";
+    }
+    
+    var multiplier = 1;
+    var bluecoincount = 0;
+    var private = 0;
+    var commando = 0;
+    var cadet = 0;
+    var infantry = 0;
+    var marksman = 0;
+    var rookie = 0;
+    
+    function timer() {
+        bluecoincount = bluecoincount + private*multiplier;
+        bluecoincount = bluecoincount + commando*5*multiplier;
+        bluecoincount = bluecoincount + cadet*10*multiplier;
+        bluecoincount = bluecoincount + infantry*40*multiplier;
+        bluecoincount = bluecoincount + marksman*100*multiplier;
+        bluecoincount = bluecoincount + rookie*300*multiplier;
+        update()
+    }
+    setInterval(timer, 1000)
+</script>
 <html>
-<head>
-<script src="main.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>Clone Armies Clicker</title>
-</head>
-<body onload="loadSave()">
-<div class="tabs">
-</button>
-<button class="tablinks" onclick="openTab(event, 'Clones')">
-Clones
-</button>
-<button class="tablinks" onclick="openTab(event, 'Upgrades');checkUpgrades()">
-Upgrades
-</button>
-<button class="tablinks" onclick="openTab(event, 'Options')">
-Options
-</button>
-</div>
-<div id="Clones" class="tabcontent">
-<p id="coins">0 Blue Coins</p>
-<p id="coinspersec">0 Blue Coins per second</p>
-<button id="click" onmouseup="addCoins()">Generate Blue Coins!</button>
-<br>
-<button id="private" onclick="buyPrivate()">Clone Private for 10 Blue Coins</button>
-<p id="privateAmount">You cloned 0 Privates</p>
-<p id="privateProduce">Earning 0 Blue Coins per second</p>
-<br>
-<button id="commando" onclick="buyCommando()">Clone Commando for 25 Blue Coins</button>
-<p id="commandoAmount">You cloned 0 Commandos</p>
-<p id="commandoProduce">Earning 0 Blue Coins per second</p>
-<br>
-<button id="cadet" onclick="buyCadet()">Clone Cadet for 100 Blue Coins</button>
-<p id="cadetAmount">You cloned 0 Cadets</p>
-<p id="cadetProduce">Earning 0 Blue Coins per second</p>
-<br>
-<button id="infantry" onclick="buyInfantry()">Clone Infantry for 500 Blue Coins</button>
-<p id="infantryAmount">You cloned 0 Infantrymen</p>
-<p id="infantryProduce">Earning 0 Blue Coins per second</p>
-<br>
-</div>
-<div id="Upgrades" class="tabcontent">
-<div id="clickUpgrades" class="upgrades">
-<div id="clickStrength">
-<button id="buyClickUpgrade" class="clickStrength" onclick="clickHarder()">Doubles your click power</button>
-<p id="clickCostDisplay" class="clickStrength"></p>
-</div>
-</div>
-</div>
-<div id="Options" class="tabcontent">
-<div id="mainOptions">
-<button id="reset" class="resetGame" onclick="resetGame()"> Reset everything in the game </button>
-<p>Quite risky to do, but it's worth the catch!</p>
-<p>Most useless function I've made straightforwardly. It makes the game refresh faster, not speedup the whole game</p>
-<input type="number" id="refreshRate" value=100>
-<button onclick="refreshRate()">Update rate</button>
-</div>
-</div>
+<head><title>Clone Armies Clicker</title></head>
+<body>
+
+    <p id="cookiespersecond">You are gaining 0 Cookies per/s</p>
+    
+    <a href=# onclick="add()"><img src="Generator.png"></a>
+    <br><br>
+    You got: 
+    <input type="text" id="text" disabled style= text-align:center value=0>
+    <script>
+    function add() {
+        bluecoincount = bluecoincount + 1
+        update()
+    }
+    </script>
+     Blue Coins
+    <br><br>
+    
+    <button><a href="#" onClick="save()">Save</a></button>
+    <button><a href="#" onclick="load()">Load</a></button>
+    <br><br>
+    
+    <p id="ammountMultiplier">Multiplier Upgrade x2</p>
+    <button><a href="#" onClick="buyMultiplier()"><span id="ammountMultiplier2">x2</span></a></button>
+    <p id="costMultiplier">10,000 Blue Coins</p>
+    <p id="currentMultiplier">Your current Multiplier is x1</p>
+    <br>
+    
+    <p>Clone Private</p>
+    <button><a href="#" onClick="buyPrivate()"><img src=Private.png width="30px" height="40px"></a></button>
+    <p id="privateCost">10 Blue Coins</p>
+    <p id="privateAmount">You Cloned 0 Privates</p>
+    
+    <br>
+    
+    <p>Clone Commando</p>
+    <button><a href="#" onClick="buyCommando()"><img src="Commando.png" width="40px" height="50px"></a></button>
+    <p id="commandoCost">25 Blue Coins</p>
+    <p id="commandoAmount">You Cloned 0 Commandos</p>
+  
+    <br>
+    
+    <p>Clone Cadet</p>
+    <button><a href="#" onClick="buyCadet()"><img src="Cadet.jpg" width="35px" height="35px"></a></button>
+    <p id="cadetCost">100 Blue Coins</p>
+    <p id="cadetAmount">You Cloned 0 Cadets</p>
+  
+    <br>
+    
+    <p>Clone Infantry</p>
+    <button><a href="#" onClick="buyInfantry()"><img src="Infantry.png" width="40px" height="45px"></a></button>
+    <p id="infantryCost">500 Blue Coins</p>
+    <p id="infantryAmount">You Cloned 0 Infantrymen</p>
+  
+    <br>
+    
+    <p>Clone Marksman</p>
+    <button><a href="#" onClick="buyMarksman()"><img src="Marksman.jpg" width="35px" height="35px"></a></button>
+    <p id="marksmanCost">2,000 Blue Coins</p>
+    <p id="marksmanAmount">You Cloned 0 Marksmen</p>
+  
+    <br>
+    
+    <p>Clone Rookie</p>
+    <button><a href="#" onClick="buyRookie()"><img src="Rookie.jpg" width="35px" height="35px"></a></button>
+    <p id="rookieCost">8,000 Blue Coins</p>
+    <p id="rookieAmount">You Cloned 0 Rookies</p>
+    
+    <script>
+    function save() {
+        localStorage.setItem("bluecoincount", bluecoincount);
+        localStorage.setItem("private", private);
+        localStorage.setItem("commando", commando):
+        localStorage.setItem("cadet", cadet);
+        localStorage.setItem("infantry", infantry);
+        localStorage.setItem("marksman", marksman);
+        localStorage.setItem("rookie", rookie);
+        localStorage.setItem("multiplier", multiplier);
+    }
+    function load() {
+        bluecoincount = localStorage.getItem("bluecoincount");
+        bluecoincount = parseInt(bluecoincount);
+        private = localStorage.getItem("private");
+        private = parseInt(private);
+        commando = localStorage.getItem("commando");
+        commando = parseInt(commando);
+        cadet = localStorage.getItem("cadet");
+        cadet = parseInt(cadet);
+        infantry = localStorage.getItem("infantry");
+        infantry = parseInt(infantry);
+        marksman = localStorage.getItem("marksman");
+        marksman = parseInt(marksman);
+        rookie = localStorage.getItem("rookie");
+        rookie = parseInt(rookie);
+        multiplier = localStorage.getItem("multiplier");
+        multiplier = parseInt(multiplier);        
+        update()
+    }
+        
+    function buyPrivate() {
+        if (bluecoincount >= ((private+1) * 10)) {
+            bluecoincount = bluecoincount - ((private+1) * 10);
+            private = private + 1;
+            update()
+        }
+    }
+        
+    function buyCommando() {
+        if (bluecoincount >= ((commando+1) * 25)) {
+            bluecoincount = bluecoincount - ((commando+1) * 30);
+            commando = commando + 1;
+            update()
+        }
+    }
+      
+    function buyCadet() {
+        if (bluecoincount >= ((cadet+1) * 100)) {
+            bluecoincount = bluecoincount - ((cadet+1) * 25);
+            cadet = cadet + 1;
+            update()
+        }
+    }
+      
+    function buyInfantry() {
+        if (bluecoincount >= ((infantry+1) * 500)) {
+            bluecoincount = bluecoincount - ((infantry+1) * 20);
+            infantry = infantry + 1;
+            update()
+        }
+    }
+      
+    function buyMarksman() {
+        if (bluecoincount >= ((marksman+1) * 2000)) {
+            bluecoincount = bluecoincount - ((marksman+1) * 17.5);
+            marksman = marksman + 1;
+            update()
+        }
+    }
+      
+    function buyRookie() {
+        if (bluecoincount >= ((rookie+1) * 8000)) {
+            bluecoincount = bluecoincount - ((cadet+1) * 15);
+            rookie = rookie + 1;
+            update()
+        }
+    }
+    
+    function buyMultiplier() {
+        if (bluecoincount >= ((multiplier+1) * 10000)) {
+            bluecoincount = bluecoincount - ((multiplier+1) * 5);
+            multiplier = multiplier + 1;
+            update()
+        }
+    }
+    </script>
 </body>
 </html>
