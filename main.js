@@ -122,9 +122,7 @@ window.setInterval(function() { //Adds together all the Lines of Code and then u
 	  coins = (coins + (privateTotal * privateCPS) + (commandoTotal * commandoCPS) + (cadetTotal * cadetCPS));
 		totalCPS = ((privateTotal * privateCPS) + (commandoTotal * commandoCPS) + (cadetTotal * cadetCPS));
 		document.getElementById("coinspersec").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second':
-                document.getElementById("coinspersec2").innerHTML = totalCPS.toFixed(1) + ' Blue Coins per second':
 		document.getElementById("coins").innerHTML = coins.toFixed(1) + ' Blue Coins';
-                document.getElementById("coins2").innerHTML = coins.toFixed(1) + ' Blue Coins';
 		document.cookie = "coins=" + coins.toFixed(1);
 }, 1000); // dont change this to anything other than 1000 lol
 
