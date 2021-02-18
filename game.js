@@ -61,7 +61,7 @@ class Building {
                     multiplier *= 2;
                     if (this.name == 'Autoclicker') {
                         player.aMPC *= 2;
-                    }
+                    },
                     else if (this.name == 'Power Clicks') {
                         player.aMPC *= 2;
                     }
