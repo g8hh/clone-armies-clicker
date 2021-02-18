@@ -54,19 +54,19 @@ class Building {
         let multiplier = 1;
         let buildingCount = game.utilities.getBuildingCount();
         this.specialCPS = 0;
-        if (this.name == 'Cursor') { game.player.aMPC = 1; }
+        if (this.name == 'Autoclicker') { game.player.aMPC = 1; }
         this.upgrades.forEach(upgrade => {
             if (upgrade.owned == true) {
                 if (upgrade.special == false) {
                     multiplier *= 2;
-                    if (this.name == 'Cursor') {
+                    if (this.name == 'Autoclicker') {
                         player.aMPC *= 2;
                     }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for grandmas as well.
                     switch (this.name) {
-                        case 'Cursor':
+                        case 'Autoclicker':
                             let nonCursorBuildingCount = buildingCount - this.amount;
                             this.specialCPS += (upgrade.special * nonCursorBuildingCount) * this.amount;
                             player.aMPC += (upgrade.special * nonCursorBuildingCount);
@@ -195,7 +195,7 @@ let game = {
     },
     buildings: [
         // Generate all buildings here
-        new Building('Cursor', 15, 0.1, [
+        new Building('Autoclicker', 10, 0.1, [
             new Upgrade('Reinforced Index Finger', 100, 'Cursors and clicking are twice as efficient', 1),
             new Upgrade('Carpal tunnel prevention cream', 500, 'Cursors and clicking are twice as efficient', 1),
             new Upgrade('Ambidextrous', 10000, 'Cursors and clicking are twice as efficient', 10),
@@ -419,7 +419,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Qua', 'Qui', 'Sex', 'Sep', 'Oct', 'Non', 'Dec', 'Und', 'Duo', 'Tre', 'QuaD', 'QuiD', 'SexD', 'SepD', 'OctD', 'NonD', 'Vig'],
+        ShortNumbers: ['', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
@@ -546,7 +546,7 @@ let game = {
                 game.player.cookieStats.Spent = 0;
                 game.player.cookieStats.Clicked = 0;
                 game.buildings.forEach(building => {
-                    if (building.name != 'Cursor') {
+                    if (building.name != 'Autoclicker') {
                         building.locked = true;
                     }
                     building.amount = 0;
@@ -558,7 +558,7 @@ let game = {
                     }
                 });
                 game.constructShop();
-                game.updateShop('Cursor');
+                game.updateShop('Autoclicker');
                 game.settings.recalculateCPS = true;
             }
         },
@@ -619,7 +619,7 @@ let game = {
         let format = game.utilities.formatNumber;
         let player = game.player;
         let stats = player.cookieStats;
-        document.title = 'Cookie Clicker | ' + format(player.cookies);
+        document.title = 'Clone Armies Clicker | ' + format(player.cookies);
         updateText('cookieDisplay', format(player.cookies));
         updateText('cpcDisplay', format(player.aMPC));
         updateText('cpsDisplay', format(player.aMPF * game.settings.frameRate));
@@ -637,7 +637,7 @@ let game = {
         });
         game.utilities.updateText('shopList', finalHtml);
     },
-    currentShop: 'Cursor',
+    currentShop: 'Autoclicker',
     updateShop (name) {
         game.currentShop = name;
         let finalHtml = '';
