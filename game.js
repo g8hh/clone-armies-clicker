@@ -201,13 +201,12 @@ let game = {
             new Upgrade('Clicker III', 1000, 'Autoclickers and clicking are twice as efficient', 1),
             new Upgrade('Clicker IV', 4000, 'Autoclickers and clicking are twice as efficient', 1),
             new Upgrade('Clicker V', 15000, 'Autoclickers and clicking are twice as efficient', 1),
-            new Upgrade('Clicker VI', 50000, 'Mouse and cursors gain +1 blue coin for every non-clicker clone owned', 1, 1),
-            new Upgrade('Clicker VII', 250000, 'Mouse and cursors gain +5 blue coins for every non-clicker clone owned', 1, 5),
-            new Upgrade('Quadrillion Fingers', 10000000000, 'Mouse and cursors gain +500 cookies for each non-cursor building owned', 200, 500),
-            new Upgrade('Quintillion Fingers', 10000000000000, 'Mouse and cursors gain +5.000K for every non-cursor building owned', 250, 5000),
-            new Upgrade('Sextillion Fingers', 10000000000000000, ' Mouse and cursors gain +50.000K for every non-cursor building owned', 300, 50000),
-            new Upgrade('Septillion Fingers', 10000000000000000000, 'Mouse and cursors gain +500.000K for every non-cursor building owned', 350, 500000),
-            new Upgrade('Octillion Fingers', 10000000000000000000000, 'Mouse and cursors gain +5.000M for each non-cursor building owned', 400, 5000000)
+            new Upgrade('Clicker VI', 50000, 'Mouse and clickers gain +1 blue coin for every non-clicker clone owned', 1, 1),
+            new Upgrade('Clicker VII', 250000, 'Mouse and clickers gain +5 blue coins for every non-clicker clone owned', 1, 5),
+            new Upgrade('Clicker VIII', 1000000, 'Mouse and clickers gain +10 blue coins for every non-clicker clone owned', 1, 10),
+            new Upgrade('Clicker IX', 7500000, 'Mouse and clickers gain +25 blue coins for every non-clicker clone owned', 1, 25),
+            new Upgrade('Clicker X', 50000000, 'Mouse and clickers gain +100 blue coins for every non-clicker clone owned', 1, 100),
+            new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 1, 500)
         ], false),
         new Building('Grandma', 100, 1, [
             new Upgrade('Forwards from grandma', 1000, 'Grandmas are twice as efficient', 1),
@@ -419,7 +418,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: [' ', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
+        ShortNumbers: [', ', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
