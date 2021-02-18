@@ -212,18 +212,18 @@ let game = {
             new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 1, 500)
         ], false),
         new Building('Power Clicks', Infinity, 0, [
-            new Upgrade('Power I', 1000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power II', 10000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power III', 100000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power IV', 1000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power V', 10000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power VI', 100000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power VII', 1000000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power VIII', 10000000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power IX', 100000000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power X', 1000000000000, 'Clicking is twice as efficient', 1),
-            new Upgrade('Power XI', 1000000000000000, 'Clicking is twice as efficient', 1)
-        ], false),
+            new Upgrade('Power I', 1000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power II', 10000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power III', 100000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power IV', 1000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power V', 10000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power VI', 100000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power VII', 1000000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power VIII', 10000000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power IX', 100000000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power X', 1000000000000, 'Clicking is twice as efficient', 0),
+            new Upgrade('Power XI', 1000000000000000, 'Clicking is twice as efficient', 0)
+        ], true),
         new Building('Private', 100, 1, [
             new Upgrade('Private I', 1000, 'Privates are twice as efficent', 1),
             new Upgrade('Private II', 5000, 'Privates are twice as efficent', 1),
@@ -562,9 +562,6 @@ let game = {
                 game.player.cookieStats.Clicked = 0;
                 game.buildings.forEach(building => {
                     if (building.name != 'Autoclicker') {
-                        building.locked = true;
-                    }
-                    else if (building.name != 'Power Clicks') {
                         building.locked = true;
                     }
                     building.amount = 0;
