@@ -113,7 +113,7 @@ class Building {
     }
 
     generateUpgradeButtons() {
-        let html = '';
+        let html = '':
         let notMet = false;
         this.upgrades.forEach(upgrade => {
             let format = game.utilities.formatNumber;
@@ -211,7 +211,7 @@ let game = {
             new Upgrade('Clicker X', 50000000, 'Mouse and clickers gain +100 blue coins for every non-clicker clone owned', 1, 100),
             new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 1, 500)
         ], false),
-        new Building('Power Clicks', Infinity, 0, [
+        new Building('Power Clicks', 0, 0, [
             new Upgrade('Power I', 1000, 'Clicking is twice as efficient', 0),
             new Upgrade('Power II', 10000, 'Clicking is twice as efficient', 0),
             new Upgrade('Power III', 100000, 'Clicking is twice as efficient', 0),
@@ -573,7 +573,7 @@ let game = {
                     }
                 });
                 game.constructShop();
-                game.updateShop('Autoclicker', 'Power Clicks');
+                game.updateShop('Autoclicker');
                 game.settings.recalculateCPS = true;
             }
         },
