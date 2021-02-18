@@ -208,49 +208,49 @@ let game = {
             new Upgrade('Clicker X', 50000000, 'Mouse and clickers gain +100 blue coins for every non-clicker clone owned', 1, 100),
             new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 1, 500)
         ], false),
-        new Building('Grandma', 100, 1, [
-            new Upgrade('Forwards from grandma', 1000, 'Grandmas are twice as efficient', 1),
-            new Upgrade('Steel-plated rolling pins', 5000, 'Grandmas are twice as efficient', 5),
-            new Upgrade('Lubricated dentures', 50000, 'Grandmas are twice as efficient', 25),
-            new Upgrade('Prune juice', 5000000, 'Grandmas are twice as efficient', 50),
-            new Upgrade('Double-thick glasses', 500000000, 'Grandmas are twice as efficient', 100),
-            new Upgrade('Aging agents', 50000000000, 'Grandmas are twice as efficient', 150),
-            new Upgrade('Xtreme walkers', 50000000000000, 'Grandmas are twice as efficient', 200),
-            new Upgrade('The Unbridling', 50000000000000000, 'Grandmas are twice as efficient', 250),
-            new Upgrade('Reverse dementia', 50000000000000000000, 'Grandmas are twice as efficient', 300),
-            new Upgrade('Timeproof hair dyes', 50000000000000000000000, 'Grandmas are twice as efficient', 350),
-            new Upgrade('Good manners', 500000000000000000000000000, 'Grandmas are twice as efficient', 400),
+        new Building('Private', 100, 1, [
+            new Upgrade('Private I', 1000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private II', 5000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private III', 15000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private IV', 50000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private V', 200000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private VI', 500000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private VII', 2500000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private VIII', 10000000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private IX', 35000000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private X', 92500000, 'Privates are twice as efficent', 1),
+            new Upgrade('Private XI', 275000000, 'Privates are twice as efficent', 1)
         ]),
-        new Building('Farm', 1100, 8, [
-            new Upgrade('Cheap hoes', 11000, 'Farms are twice as efficient', 1),
-            new Upgrade('Fertilizer', 55000, 'Farms are twice as efficient', 5),
-            new Upgrade('Biscuit Trees', 550000, 'Farms are twice as efficient', 25),
-            new Upgrade('Genetically-modified Biscuits', 55000000, 'Farms are twice as efficient', 50),
-            new Upgrade('Gingerbread scarecrows', 5500000000, 'Farms are twice as efficient', 100),
-            new Upgrade('Pulsar sprinklers', 550000000000, 'Farms are twice as efficient', 150),
-            new Upgrade('Fudge fungus', 550000000000000, 'Farms are twice as efficient', 200),
-            new Upgrade('Wheat triffids', 550000000000000000, 'Farms are twice as efficient', 250),
-            new Upgrade('Humane pesticides', 550000000000000000000, 'Farms are twice as efficient', 300),
-            new Upgrade('Barnstars', 550000000000000000000000, 'Ah, yes. These help quite a bit. Somehow.', 350),
-            new Upgrade('Lindworms', 5500000000000000000000000000, 'You have to import these from far up north, but they really help areate the soil', 400)
+        new Building('Commando', 250, 5, [
+            new Upgrade('Commando I', 3500, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando II', 17500, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando III', 60000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando IV', 300000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando V', 1000000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando VI', 4000000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando VII', 12500000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando VIII', 50000000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando IX', 250000000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando X', 750000000, 'Commandos are twice as efficent', 1),
+            new Upgrade('Commando XI', 3000000000, 'Commandos are twice as efficent', 1)
         ]),
-        new Building('Mine', 12000, 47, [
-            new Upgrade('Sugar gas', 120000, 'Mines are twice as efficient', 1),
-            new Upgrade('Megadrill', 600000, 'Mines are twice as efficient', 5),
-            new Upgrade('Ultradrill', 6000000, 'Mines are twice as efficient', 25),
-            new Upgrade('Ultimadrill', 600000000, 'Mines are twice as efficient', 50),
-            new Upgrade('H-bomb Mining', 60000000000, 'Mines are twice as efficient', 100),
-            new Upgrade('Coreforge', 6000000000000, 'Mines are twice as efficient', 150),
+        new Building('Cadet', 1000, 15, [
+            new Upgrade('Cadet I', 12500, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet II', 50000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet III', 225000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet IV', 800000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet V', 4000000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet VI', 13000000, 'Cadets are twice as efficient', 1),
             new Upgrade('Planetsplitters', 6000000000000000, 'Mines are twice as efficient', 200),
             new Upgrade('Canola oil wells', 6000000000000000000, 'Mines are twice as efficient', 250),
             new Upgrade('Mole People', 6000000000000000000000, 'Mines are twice as efficient', 300),
             new Upgrade('Mine canaries', 6000000000000000000000000, 'Mines are twice as efficient', 350),
             new Upgrade('Bore again', 60000000000000000000000000000, 'Mines are twice as efficient', 400)
         ]),
-        new Building('Factory', 130000, 260, [
-            new Upgrade('Sturdier conveyor belts', 1300000, 'Factories are twice as efficient', 1),
-            new Upgrade('Child labor', 6500000, 'Factories are twice as efficient', 5),
-            new Upgrade('Sweatshop', 65000000, 'Factories are twice as efficient', 25),
+        new Building('Infantry', 5000, 50, [
+            new Upgrade('Infantry I', 60000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry II', 225000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry III', 750000, 'Infantrymen are twice as efficient', 1),
             new Upgrade('Radium reactors', 6500000000, 'Factories are twice as efficient', 50),
             new Upgrade('Recombobulators', 650000000000, 'Factories are twice as efficient', 100),
             new Upgrade('Deep-bake process', 65000000000000, 'Factories are twice as efficient', 150),
@@ -418,7 +418,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: [', ', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
