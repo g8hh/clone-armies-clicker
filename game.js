@@ -62,6 +62,9 @@ class Building {
                     if (this.name == 'Autoclicker') {
                         player.aMPC *= 2;
                     }
+                    else if (this.name == 'Power Clicks') {
+                        player.aMPC *= 2;
+                    }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for grandmas as well.
@@ -208,6 +211,19 @@ let game = {
             new Upgrade('Clicker X', 50000000, 'Mouse and clickers gain +100 blue coins for every non-clicker clone owned', 1, 100),
             new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 1, 500)
         ], false),
+        new Building('Power Clicks', Infinity, 0, [
+            new Upgrade('Power I', 1000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power II', 10000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power III', 100000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power IV', 1000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power V', 10000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power VI', 100000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power VII', 1000000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power VIII', 10000000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power IX', 100000000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power X', 1000000000000, 'Clicking is twice as efficient', 1),
+            new Upgrade('Power XI', 1000000000000000, 'Clicking is twice as efficient', 1)
+        ], false),
         new Building('Private', 100, 1, [
             new Upgrade('Private I', 1000, 'Privates are twice as efficent', 1),
             new Upgrade('Private II', 5000, 'Privates are twice as efficent', 1),
@@ -312,7 +328,7 @@ let game = {
             new Upgrade('Pyro X', 2000000000000, 'Pyros are twice as efficient', 1),
             new Upgrade('Pyro XI', 7000000000000, 'Pyros are twice as efficient', 1)
         ]),
-        new Building('UPCOMING', Infinity, 1, [
+        new Building('UPCOMING', Infinity, 0, [
             new Upgrade('Antimony', 750000000000, 'Alchemy labs are twice as efficient', 1),
             new Upgrade('Essence of dough', 3750000000000, 'Alchemy labs are twice as efficient', 5),
             new Upgrade('True chocolate', 37500000000000, 'Alchemy labs are twice as efficient', 25),
@@ -548,6 +564,9 @@ let game = {
                     if (building.name != 'Autoclicker') {
                         building.locked = true;
                     }
+                    else if (building.name != 'Power Clicks') {
+                        building.locked = true;
+                    }
                     building.amount = 0;
                     building.effect = 0;
                     building.specialCPS = 0;
@@ -557,7 +576,7 @@ let game = {
                     }
                 });
                 game.constructShop();
-                game.updateShop('Autoclicker');
+                game.updateShop('Autoclicker', 'Power Clicks');
                 game.settings.recalculateCPS = true;
             }
         },
