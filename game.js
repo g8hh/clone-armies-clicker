@@ -200,7 +200,7 @@ let game = {
             new Upgrade('Private IV', 75000, 'Privates are twice as strong', 1),
             new Upgrade('Private V', 500000, 'Privates are twice as strong', 1),
             new Upgrade('Super Private', 8000000, 'Privates are twice as strong', 1)
-        ]),
+        ] false),
         new Building('Commando', 25, 5, [
             new Upgrade('Commando II', 10000, 'Commandos are twice as strong', 1),
             new Upgrade('Commando III', 150000, 'Commandos are twice as strong', 1),
