@@ -157,7 +157,7 @@ function wizardy( str ) {
 
 function magic(string) {
 	string = wizardy(string).split('|');
-	if (string[0] == 'CLONECLICKER') {
+	if (string[0] == 'COOKIECLICKER') {
 		return wizardy(string[1]);
 	} 
 	return false;
@@ -165,5 +165,5 @@ function magic(string) {
 
 function premagic(string) {
 	string = witchery(string);
-	return witchery('CLONECLICKER|'+string);
+	return witchery('COOKIECLICKER|'+string);
 }
