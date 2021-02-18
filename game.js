@@ -196,13 +196,13 @@ let game = {
     buildings: [
         // Generate all buildings here
         new Building('Autoclicker', 10, 0.1, [
-            new Upgrade('Reinforced Index Finger', 100, 'Cursors and clicking are twice as efficient', 1),
-            new Upgrade('Carpal tunnel prevention cream', 500, 'Cursors and clicking are twice as efficient', 1),
-            new Upgrade('Ambidextrous', 10000, 'Cursors and clicking are twice as efficient', 10),
-            new Upgrade('Thousand Fingers', 100000, 'Mouse and cursors gain +0.1 cookies for every non-cursor building owned', 25, 0.1),
-            new Upgrade('Million Fingers', 10000000, 'Mouse and cursors gain +0.5 cookies for every non-cursor building owned', 50, 0.5),
-            new Upgrade('Billion Fingers', 100000000, 'Mouse and cursors gain +5 cookies for every non-cursor building owned', 100, 5),
-            new Upgrade('Trillion Fingers', 1000000000, 'Mouse and cursors gain +50 for every non-cursor building owned', 150, 50),
+            new Upgrade('Clicker I', 100, 'Autoclickers and clicking are twice as efficient', 1),
+            new Upgrade('Clicker II', 300, 'Autoclickers and clicking are twice as efficient', 1),
+            new Upgrade('Clicker III', 1000, 'Autoclickers and clicking are twice as efficient', 1),
+            new Upgrade('Clicker IV', 4000, 'Autoclickers and clicking are twice as efficient', 1),
+            new Upgrade('Clicker V', 15000, 'Autoclickers and clicking are twice as efficient', 1),
+            new Upgrade('Clicker VI', 50000, 'Mouse and cursors gain +1 blue coin for every non-clicker clone owned', 1, 1),
+            new Upgrade('Clicker VII', 250000, 'Mouse and cursors gain +5 blue coins for every non-clicker clone owned', 1, 5),
             new Upgrade('Quadrillion Fingers', 10000000000, 'Mouse and cursors gain +500 cookies for each non-cursor building owned', 200, 500),
             new Upgrade('Quintillion Fingers', 10000000000000, 'Mouse and cursors gain +5.000K for every non-cursor building owned', 250, 5000),
             new Upgrade('Sextillion Fingers', 10000000000000000, ' Mouse and cursors gain +50.000K for every non-cursor building owned', 300, 50000),
@@ -419,7 +419,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
+        ShortNumbers: [' ', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
