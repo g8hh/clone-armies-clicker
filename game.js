@@ -254,52 +254,44 @@ let game = {
             new Upgrade('Infantry IV', 3000000, 'Infantrymen are twice as efficient', 1),
             new Upgrade('Infantry V', 12750000, 'Infantrymen are twice as efficient', 1),
             new Upgrade('Infantry VI', 47500000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Cyborg workforce', 65000000000000000, 'Factories are twice as efficient', 200),
-            new Upgrade('78-hour days', 65000000000000000000, 'Factories are twice as efficient', 250),
-            new Upgrade('Machine learning', 65000000000000000000000, 'Factories are twice as efficient', 300),
-            new Upgrade('Brownie point system', 65000000000000000000000000, 'Factories are twice as efficient', 350),
-            new Upgrade('"Volunteer" interns', 650000000000000000000000000000, 'Factories are twice as efficient', 400)
+            new Upgrade('Infantry VII', 135000000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry VIII', 550000000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry IX', 1750000000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry X', 6500000000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry XI', 35000000000, 'Infantrymen are twice as efficient', 1)
         ]),
         new Building('Marksman', 30000, 200, [
             new Upgrade('Marksman I', 400000, 'Marksmen are twice as efficient', 1),
             new Upgrade('Marksman II', 1375000, 'Marksmen are twice as efficient', 1),
             new Upgrade('Marksman III', 5250000, 'Marksmen are twice as efficient', 1),
             new Upgrade('Marksman IV', 20000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Exponential interest rates', 7000000000000, 'Banks are twice as efficient', 100),
-            new Upgrade('Financial zen', 700000000000000, 'Banks are twice as efficient', 150),
-            new Upgrade('Way of the wallet', 700000000000000000, 'Banks are twice as efficient', 200),
-            new Upgrade('The stuff rationale', 700000000000000000000, 'Banks are twice as efficient', 250),
-            new Upgrade('Edible money', 700000000000000000000, 'Banks are twice as efficient', 300),
-            new Upgrade('Grand supercycle', 700000000000000000000000, 'Banks are twice as efficient', 350),
-            new Upgrade('Rules of acquisition', 7000000000000000000000000000, 'Banks are twice as efficient', 400)
+            new Upgrade('Marksman V', 90000000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman VI', 250000000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman VII', 825000000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman VIII', 3250000000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman IX', 8750000000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman X', 30000000000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman XI', 125000000000, 'Marksmen are twice as efficient', 1)
         ]),
         new Building('Rookie', 125000, 650, [
             new Upgrade('Rookie I', 1500000, 'Rookies are twice as efficient', 1),
             new Upgrade('Rookie II', 6250000, 'Rookies are twice as efficient', 1),
             new Upgrade('Rookie III', 20000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Sun festival', 1000000000000, 'Temples are twice as efficient', 50),
-            new Upgrade('Enlarged pantheon', 100000000000000, 'Temples are twice as efficient', 100),
-            new Upgrade('Great Baker in the sky', 10000000000000000, 'Temples are twice as efficient', 150),
-            new Upgrade('Creation myth', 10000000000000000000, 'Temples are twice as efficient', 200),
-            new Upgrade('Theocracy', 10000000000000000000000, 'Temples are twice as efficient', 250),
-            new Upgrade('Sick rap prayers', 10000000000000000000000000, 'Temples are twice as efficient', 300),
-            new Upgrade('Psalm-reading', 10000000000000000000000000000, 'Temples are twice as efficient', 350),
-            new Upgrade('War of the gods', 100000000000000000000000000000000, 'Temples are twice as efficient', 400)
+            new Upgrade('Rookie IV', 100000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie V', 400000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie VI', 1300000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie VII', 6000000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie VIII', 16000000000, 'Rookies are twice as efficient', 1)
         ]),
-        new Building('UPCOMING', 1.678e308, 44000, [
-            new Upgrade('Pointier hats', 3300000000, 'Wizard towers are twice as efficient', 1),
-            new Upgrade('Beardlier beards', 16500000000, 'Wizard towers are twice as efficient', 5),
-            new Upgrade('Ancient grimoires', 165000000000, 'Wizard towers are twice as efficient', 25),
-            new Upgrade('Kitchen curses', 16500000000000, 'Wizard towers are twice as efficient', 50),
-            new Upgrade('School of sorcery', 1650000000000000, 'Wizard towers are twice as efficient', 100),
-            new Upgrade('Dark formulas', 165000000000000000, 'Wizard towers are twice as efficient', 150),
-            new Upgrade('Cookiemancy', 165000000000000000000, 'Wizard towers are twice as efficient', 200),
-            new Upgrade('Rabbit trick', 165000000000000000000000, 'Wizard towers are twice as efficient', 250),
-            new Upgrade('Deluxe tailored wands', 165000000000000000000000000, 'Wizard towers are twice as efficient', 300),
-            new Upgrade('Immobile spellcasting', 165000000000000000000000000000, 'Wizard towers are twice as efficient', 350),
-            new Upgrade('Electricity', 1650000000000000000000000000000000, 'Wizard towers are twices as efficient', 400)
+        new Building('Defender', 750000, 2750, [
+            new Upgrade('Defender I', 8250000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender II', 27500000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender III', 100000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender IV', 350000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender V', 1150000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender VI', 47500000000, 'Defenders are twice as efficient', 1)
         ]),
-        new Building('Shipment', 5100000000, 260000, [
+        new Building('UPCOMING', 1.769e308, 1, [
             new Upgrade('Vanilla nebulae', 51000000000, 'Shipments are twice as efficient', 1),
             new Upgrade('Wormholes', 255000000000, 'Shipments are twice as efficient', 5),
             new Upgrade('Frequent flyer', 2550000000000, 'Shipments are twice as efficient', 25),
