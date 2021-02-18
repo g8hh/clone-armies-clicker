@@ -99,10 +99,9 @@ class Building {
     generateBuyButtons() {
         let format = game.utilities.formatNumber;
         let html = '<div class="btnBuyGroup">';
-        html += `<button onclick="game.buyBuilding('${this.name}', 1);">Buy x1</br><b>${format(this.cost)}</b></button>`;
+        html += `<button onclick="game.buyBuilding('${this.name}', 1);">Buy x1</br><b>${format(this.cost)}</b></button>`
         html += `<button onclick="game.buyBuilding('${this.name}', 5);">Buy x5</br><b>${format(this.getCost(5))}</b></button>`;
         html += `<button onclick="game.buyBuilding('${this.name}', 10);">Buy x10</br><b>${format(this.getCost(10))}</b></button>`;
-        html += `<button onclick="game.buyBuilding('${this.name}', 25);">Buy x25</br><b>${format(this.getCost(25))}</b></button>`:
         html += `<button onclick="game.buyBuilding('${this.name}', 100);">Buy x100</br><b>${format(this.getCost(100))}</b></button>`;
         html += '</div>';
         return html;
@@ -190,13 +189,13 @@ let game = {
     settings: {
         frameRate: 30,
         recalculateCPS: true,
-        key: 'cloneclicker'
+        key: 'clonearmiesclicker'
     },
     buildings: [
         // Generate all buildings here
         new Building('Private', 10, 1, [
-            new Upgrade('Private II', 1000, 'Privates are twice as strong', 1),
-            new Upgrade('Private III', 10000, 'Privates are twice as strong', 1),
+            new Upgrade('Private II', 100, 'Privates and clicks are twice as strong', 1),
+            new Upgrade('Private III', 1000, 'Privates are twice as strong', 1),
             new Upgrade('Private IV', 75000, 'Privates are twice as strong', 1),
             new Upgrade('Private V', 500000, 'Privates are twice as strong', 1),
             new Upgrade('Super Private', 8000000, 'Privates are twice as strong', 1)
