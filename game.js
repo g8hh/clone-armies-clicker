@@ -227,7 +227,7 @@ let game = {
             new Upgrade('Power IX', 100000000000, 'Clicking is twice as efficient', 0),
             new Upgrade('Power X', 1000000000000, 'Clicking is twice as efficient', 0),
             new Upgrade('Power XI', 1000000000000000, 'Clicking is twice as efficient', 0)
-        ]),
+        ], false),
         new Building('Private', 100, 1, [
             new Upgrade('Private I', 1000, 'Privates are twice as efficent', 1),
             new Upgrade('Private II', 5000, 'Privates are twice as efficent', 1),
