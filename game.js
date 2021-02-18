@@ -46,7 +46,7 @@ class Building {
                     return;
                 }
             }
-        });
+        })
     }
 
     calculateEffectOfUpgrades() {
