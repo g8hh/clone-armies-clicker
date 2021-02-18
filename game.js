@@ -281,7 +281,10 @@ let game = {
             new Upgrade('Rookie V', 400000000, 'Rookies are twice as efficient', 1),
             new Upgrade('Rookie VI', 1300000000, 'Rookies are twice as efficient', 1),
             new Upgrade('Rookie VII', 6000000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie VIII', 16000000000, 'Rookies are twice as efficient', 1)
+            new Upgrade('Rookie VIII', 16000000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie IX', 50000000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie X', 175000000000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie XI', 725000000000, 'Rookies are twice as efficient', 1)
         ]),
         new Building('Defender', 750000, 2750, [
             new Upgrade('Defender I', 8250000, 'Defenders are twice as efficient', 1),
@@ -289,22 +292,27 @@ let game = {
             new Upgrade('Defender III', 100000000, 'Defenders are twice as efficient', 1),
             new Upgrade('Defender IV', 350000000, 'Defenders are twice as efficient', 1),
             new Upgrade('Defender V', 1150000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender VI', 4750000000, 'Defenders are twice as efficient', 1)
+            new Upgrade('Defender VI', 4750000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender VII', 22500000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender VIII', 65000000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender IX', 250000000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender X', 900000000000, 'Defenders are twice as efficient', 1),
+            new Upgrade('Defender XI', 3250000000000, 'Defenders are twice as efficient', 1)
         ]),
-        new Building('UPCOMING', 1.769e308, 1, [
-            new Upgrade('Vanilla nebulae', 51000000000, 'Shipments are twice as efficient', 1),
-            new Upgrade('Wormholes', 255000000000, 'Shipments are twice as efficient', 5),
-            new Upgrade('Frequent flyer', 2550000000000, 'Shipments are twice as efficient', 25),
-            new Upgrade('Warp drive', 255000000000000, 'Shipments are twice as efficient', 50),
-            new Upgrade('Chocolate monoliths', 25500000000000000, 'Shipments are twice as efficient', 100),
-            new Upgrade('Generation ship', 2550000000000000000, 'Shipments are twice as efficient', 150),
-            new Upgrade('Dyson sphere', 2550000000000000000000, 'Shipments are twice as efficient', 200),
-            new Upgrade('The final frontier', 2550000000000000000000000, 'Shipments are twice as efficient', 250),
-            new Upgrade('Autopilot', 2550000000000000000000000000, 'Shipments are twice as efficient', 300),
-            new Upgrade('Restaurants at the end of the universe', 2550000000000000000000000000000, 'Shipments are twice as efficient', 350),
-            new Upgrade('Universal alphabet', 25500000000000000000000000000000000, 'Shipments are twice as efficient', 400)
+        new Building('Pyro', 2000000, 5250, [
+            new Upgrade('Pyro I', 23500000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro II', 67500000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro III', 250000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro IV', 875000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro V', 2600000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro VI', 10000000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro VII', 32500000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro VIII', 122500000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro IX', 500000000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro X', 2000000000000, 'Pyros are twice as efficient', 1),
+            new Upgrade('Pyro XI', 7000000000000, 'Pyros are twice as efficient', 1)
         ]),
-        new Building('Alchemy Lab', 75000000000, 1500000, [
+        new Building('UPCOMING', Infinity, 1, [
             new Upgrade('Antimony', 750000000000, 'Alchemy labs are twice as efficient', 1),
             new Upgrade('Essence of dough', 3750000000000, 'Alchemy labs are twice as efficient', 5),
             new Upgrade('True chocolate', 37500000000000, 'Alchemy labs are twice as efficient', 25),
