@@ -289,7 +289,7 @@ let game = {
             new Upgrade('Defender III', 100000000, 'Defenders are twice as efficient', 1),
             new Upgrade('Defender IV', 350000000, 'Defenders are twice as efficient', 1),
             new Upgrade('Defender V', 1150000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender VI', 47500000000, 'Defenders are twice as efficient', 1)
+            new Upgrade('Defender VI', 4750000000, 'Defenders are twice as efficient', 1)
         ]),
         new Building('UPCOMING', 1.769e308, 1, [
             new Upgrade('Vanilla nebulae', 51000000000, 'Shipments are twice as efficient', 1),
