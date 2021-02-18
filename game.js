@@ -241,30 +241,30 @@ let game = {
             new Upgrade('Cadet IV', 800000, 'Cadets are twice as efficient', 1),
             new Upgrade('Cadet V', 4000000, 'Cadets are twice as efficient', 1),
             new Upgrade('Cadet VI', 13000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Planetsplitters', 6000000000000000, 'Mines are twice as efficient', 200),
-            new Upgrade('Canola oil wells', 6000000000000000000, 'Mines are twice as efficient', 250),
-            new Upgrade('Mole People', 6000000000000000000000, 'Mines are twice as efficient', 300),
-            new Upgrade('Mine canaries', 6000000000000000000000000, 'Mines are twice as efficient', 350),
-            new Upgrade('Bore again', 60000000000000000000000000000, 'Mines are twice as efficient', 400)
+            new Upgrade('Cadet VII', 42000000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet VIII', 175000000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet IX', 725000000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet X', 2250000000, 'Cadets are twice as efficient', 1),
+            new Upgrade('Cadet XI', 10000000000, 'Cadets are twice as efficient', 1)
         ]),
         new Building('Infantry', 5000, 50, [
             new Upgrade('Infantry I', 60000, 'Infantrymen are twice as efficient', 1),
             new Upgrade('Infantry II', 225000, 'Infantrymen are twice as efficient', 1),
             new Upgrade('Infantry III', 750000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Radium reactors', 6500000000, 'Factories are twice as efficient', 50),
-            new Upgrade('Recombobulators', 650000000000, 'Factories are twice as efficient', 100),
-            new Upgrade('Deep-bake process', 65000000000000, 'Factories are twice as efficient', 150),
+            new Upgrade('Infantry IV', 3000000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry V', 12750000, 'Infantrymen are twice as efficient', 1),
+            new Upgrade('Infantry VI', 47500000, 'Infantrymen are twice as efficient', 1),
             new Upgrade('Cyborg workforce', 65000000000000000, 'Factories are twice as efficient', 200),
             new Upgrade('78-hour days', 65000000000000000000, 'Factories are twice as efficient', 250),
             new Upgrade('Machine learning', 65000000000000000000000, 'Factories are twice as efficient', 300),
             new Upgrade('Brownie point system', 65000000000000000000000000, 'Factories are twice as efficient', 350),
             new Upgrade('"Volunteer" interns', 650000000000000000000000000000, 'Factories are twice as efficient', 400)
         ]),
-        new Building('Bank', 1400000, 1400, [
-            new Upgrade('Taller Tellers', 14000000, 'Banks are twice as efficient', 1),
-            new Upgrade('Scissor-resistant Credit Cards', 70000000, 'Banks are twice as efficient', 5),
-            new Upgrade('Acid-proof vaults', 700000000, 'Banks are twice as efficient', 25),
-            new Upgrade('Chocolate coins', 70000000000, 'Banks are twice as efficient', 50),
+        new Building('Marksman', 30000, 200, [
+            new Upgrade('Marksman I', 400000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman II', 1375000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman III', 5250000, 'Marksmen are twice as efficient', 1),
+            new Upgrade('Marksman IV', 20000000, 'Marksmen are twice as efficient', 1),
             new Upgrade('Exponential interest rates', 7000000000000, 'Banks are twice as efficient', 100),
             new Upgrade('Financial zen', 700000000000000, 'Banks are twice as efficient', 150),
             new Upgrade('Way of the wallet', 700000000000000000, 'Banks are twice as efficient', 200),
@@ -273,10 +273,10 @@ let game = {
             new Upgrade('Grand supercycle', 700000000000000000000000, 'Banks are twice as efficient', 350),
             new Upgrade('Rules of acquisition', 7000000000000000000000000000, 'Banks are twice as efficient', 400)
         ]),
-        new Building('Temple', 20000000, 7800, [
-            new Upgrade('Golden idols', 200000000, 'Temples are twice as efficient', 1),
-            new Upgrade('Sacrifices', 1000000000, 'Temples are twice as efficient', 5),
-            new Upgrade('Delicious blessing', 10000000000, 'Temples are twice as efficient', 25),
+        new Building('Rookie', 125000, 650, [
+            new Upgrade('Rookie I', 1500000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie II', 6250000, 'Rookies are twice as efficient', 1),
+            new Upgrade('Rookie III', 20000000, 'Rookies are twice as efficient', 1),
             new Upgrade('Sun festival', 1000000000000, 'Temples are twice as efficient', 50),
             new Upgrade('Enlarged pantheon', 100000000000000, 'Temples are twice as efficient', 100),
             new Upgrade('Great Baker in the sky', 10000000000000000, 'Temples are twice as efficient', 150),
@@ -286,7 +286,7 @@ let game = {
             new Upgrade('Psalm-reading', 10000000000000000000000000000, 'Temples are twice as efficient', 350),
             new Upgrade('War of the gods', 100000000000000000000000000000000, 'Temples are twice as efficient', 400)
         ]),
-        new Building('Wizard Tower', 330000000, 44000, [
+        new Building('UPCOMING', 1.678e308, 44000, [
             new Upgrade('Pointier hats', 3300000000, 'Wizard towers are twice as efficient', 1),
             new Upgrade('Beardlier beards', 16500000000, 'Wizard towers are twice as efficient', 5),
             new Upgrade('Ancient grimoires', 165000000000, 'Wizard towers are twice as efficient', 25),
