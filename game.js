@@ -73,6 +73,10 @@ class Building {
                             let nonCursorBuildingCount = buildingCount - this.amount;
                             this.specialCPS += (upgrade.special * nonCursorBuildingCount) * this.amount;
                             player.aMPC += (upgrade.special * nonCursorBuildingCount);
+                        case 'Power Clicks':
+                            let nonPowerBuildingCount = buildingCount - this.amount;
+                            this.specialCPS += (upgrade.special * nonPowerBuildingCount) * this.amount;
+                            player.aMPC += (upgrade.special * nonPowerBuildingCount);
                     }
                 }
             }
