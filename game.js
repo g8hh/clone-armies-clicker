@@ -62,7 +62,7 @@ class Building {
                     if (this.name == 'Autoclicker') {
                         player.aMPC *= 2;
                     }
-                    if (this.name == 'Power Clicks') {
+                    else if (this.name == 'Power Clicks') {
                         player.aMPC *= 2;
                     }
                 } else {
