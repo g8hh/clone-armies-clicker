@@ -69,6 +69,7 @@ h1 {
 }
 
 .shopList button {
+    font-family:Facile, sans-serif;
     display:block;
     width:85%;
     max-width:220px;
@@ -109,6 +110,7 @@ h1 {
 }
 
 .btnBuyGroup button {
+    font-family:Facile, sans-serif;
     width:120px;
     margin-right:5px;
     background-color:rgb(33, 171, 12);
@@ -135,6 +137,7 @@ h1 {
 }
 
 button.upgBtn{
+    font-family:Facile, sans-serif;
     color:white;
     background-color:rgb(214, 141, 4);
     border: 2px solid rgb(171, 111, 0);
