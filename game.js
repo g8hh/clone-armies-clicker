@@ -62,9 +62,6 @@ class Building {
                     if (this.name == 'Autoclicker') {
                         player.aMPC *= 2;
                     }
-                    if (this.name == 'Power Clicks') {
-                        player.aMPC *= 2;
-                    }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for grandmas as well.
@@ -72,11 +69,7 @@ class Building {
                         case 'Autoclicker':
                             let nonCursorBuildingCount = buildingCount - this.amount;
                             this.specialCPS += (upgrade.special * nonCursorBuildingCount) * this.amount;
-                            player.aMPC += (upgrade.special * nonCursorBuildingCount);
-                        case 'Power Clicks':
-                            let nonPowerBuildingCount = buildingCount - this.amount;
-                            this.specialCPS += (upgrade.special * nonPowerBuildingCount) * this.amount;
-                            player.aMPC += (upgrade.special * nonPowerBuildingCount);
+                            player.aMPC += (upgrade.special * nonCursorBuildingCount);      
                     }
                 }
             }
