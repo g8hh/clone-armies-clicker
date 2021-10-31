@@ -215,7 +215,7 @@ let game = {
             new Upgrade('Clicker XIV', 1250000000000, 'Mouse and clickers gain +100,000 blue coins for every non-clicker clone owned', 275, 100000),
             new Upgrade('Clicker XV', 20000000000000, 'Mouse and clickers gain +1 million blue coins for every non-clicker clone owned', 300, 1000000)
         ], false),
-        new Building('Power Clicker', Infinity, 0, [
+        new Building('Power Clicker', 1e306, 0, [
             new Upgrade('Power Clicks I', 50000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks II', 250000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks III', 1500000, 'Clicking efficiency is quadrupled', 0),
@@ -225,7 +225,12 @@ let game = {
             new Upgrade('Power Clicks VII', 6500000000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks VIII', 85000000000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks IX', 2750000000000, 'Clicking efficiency is quadrupled', 0),
-            new Upgrade('Power Clicks X', 500000000000000, 'Clicking efficiency is quadrupled', 0)
+            new Upgrade('Power Clicks X', 50000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XI', 1500000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XII', 40000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XIII', 600000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XIV', 9000000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XV', 150000000000000000000, 'Clicking efficiency is quadrupled', 0)
         ]),
         new Building('Private', 100, 1, [
             new Upgrade('Private I', 1000, 'Privates are twice as efficent', 10),
@@ -383,7 +388,7 @@ let game = {
             new Upgrade('Gunner X', 23750000000000000, 'Gunners are twice as efficient', 175),
             new Upgrade('Gunner XI', 60000000000000000, 'Gunners are twice as efficient', 200)
         ]),
-        new Building('UPCOMING', Infinity, 1000000000, [
+        new Building('UPCOMING', 1e303, 1000000000, [
             new Upgrade('Medic I', 1e15, 'Medics are twice as efficient', 10),
             new Upgrade('Medic II', 5e15, 'Medics are twice as efficient', 20),
             new Upgrade('Medic III', 3e16, 'Medics are twice as efficient', 30),
