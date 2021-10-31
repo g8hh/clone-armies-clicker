@@ -214,7 +214,7 @@ let game = {
             new Upgrade('Clicker XIII', 67500000000, 'Mouse and clickers gain +10,000 blue coins for every non-clicker clone owned', 250, 10000),
             new Upgrade('Clicker XIV', 1250000000000, 'Mouse and clickers gain +100,000 blue coins for every non-clicker clone owned', 275, 100000),
             new Upgrade('Clicker XV', 20000000000000, 'Mouse and clickers gain +1 million blue coins for every non-clicker clone owned', 300, 1000000)
-        ], false),
+        ], true),
         new Building('Power Clicker', 1e306, 0, [
             new Upgrade('Power Clicks I', 50000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks II', 250000, 'Clicking efficiency is quadrupled', 0),
