@@ -235,7 +235,12 @@ let game = {
             new Upgrade('Power Clicks XII', 40000000000000000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks XIII', 600000000000000000, 'Clicking efficiency is quadrupled', 0),
             new Upgrade('Power Clicks XIV', 9000000000000000000, 'Clicking efficiency is quadrupled', 0),
-            new Upgrade('Power Clicks XV', 150000000000000000000, 'Clicking efficiency is quadrupled', 0)
+            new Upgrade('Power Clicks XV', 150000000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XVI', 9500000000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XVII', 450000000000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XVIII', 65000000000000000000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XIX', 7.852e27, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks XX', 8.888e32, 'Clicking efficiency is quadrupled', 0)
         ]),
         new Building('Private', 100, 1, [
             new Upgrade('Private I', 1000, 'Privates are twice as efficient', 10),
