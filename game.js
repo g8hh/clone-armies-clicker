@@ -102,6 +102,8 @@ class Building {
         html += `<button onclick="game.buyBuilding('${this.name}', 1);">Buy x1</br><b>${format(this.cost)}</b></button>`
         html += `<button onclick="game.buyBuilding('${this.name}', 5);">Buy x5</br><b>${format(this.getCost(5))}</b></button>`;
         html += `<button onclick="game.buyBuilding('${this.name}', 10);">Buy x10</br><b>${format(this.getCost(10))}</b></button>`;
+        html += `<button onclick="game.buyBuilding('${this.name}', 25);">Buy x25</br><b>${format(this.getCost(25))}</b></button>`;
+        html += `<button onclick="game.buyBuilding('${this.name}', 50);">Buy x50</br><b>${format(this.getCost(50))}</b></button>`;
         html += '</div>';
         return html;
     }
@@ -325,7 +327,7 @@ let game = {
             new Upgrade('Butcher IX', 58700000000000, 'Butchers are twice as efficient', 150),
             new Upgrade('Butcher X', 125000000000000, 'Butchers are twice as efficient', 175),
             new Upgrade('Butcher XI', 312900000000000, 'Butchers are twice as efficient', 200)
-        ])
+        ]),
         new Building('Sapper', 75000000, 87500, [
             new Upgrade('Sapper I', 1543750000, 'Sappers are twice as efficient', 10),
             new Upgrade('Sapper II', 6887500000, 'Sappers are twice as efficient', 20),
@@ -541,7 +543,7 @@ let game = {
         let format = game.utilities.formatNumber;
         let player = game.player;
         let stats = player.cookieStats;
-        document.title = 'Cookie Clicker | ' + format(player.cookies);
+        document.title = 'Clone Armies Clicker | ' + format(player.cookies);
         updateText('cookieDisplay', format(player.cookies));
         updateText('cpcDisplay', format(player.aMPC));
         updateText('cpsDisplay', format(player.aMPF * game.settings.frameRate));
