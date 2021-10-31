@@ -601,7 +601,7 @@ let game = {
         let format = game.utilities.formatNumber;
         let player = game.player;
         let stats = player.cookieStats;
-        document.title = 'Clone Armies Clicker | ' + format(player.cookies) + 'bluecoins';
+        document.title = 'Clone Armies Clicker | ' + format(player.cookies) + ' bluecoins';
         updateText('cookieDisplay', format(player.cookies));
         updateText('cpcDisplay', format(player.aMPC));
         updateText('cpsDisplay', format(player.aMPF * game.settings.frameRate));
