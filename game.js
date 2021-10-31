@@ -213,7 +213,12 @@ let game = {
             new Upgrade('Clicker XII', 7500000000, 'Mouse and clickers gain +1,000 blue coins for every non-clicker clone owned', 225, 1000),
             new Upgrade('Clicker XIII', 67500000000, 'Mouse and clickers gain +10,000 blue coins for every non-clicker clone owned', 250, 10000),
             new Upgrade('Clicker XIV', 1250000000000, 'Mouse and clickers gain +100,000 blue coins for every non-clicker clone owned', 275, 100000),
-            new Upgrade('Clicker XV', 20000000000000, 'Mouse and clickers gain +1 million blue coins for every non-clicker clone owned', 300, 1000000)
+            new Upgrade('Clicker XV', 20000000000000, 'Mouse and clickers gain +1 million blue coins for every non-clicker clone owned', 300, 1000000),
+            new Upgrade('Clicker XVI', 8000000000000000, 'Mouse and clickers gain +100 million blue coins for every non-clicker clone owned', 350, 100000000),
+            new Upgrade('Clicker XVII', 3000000000000000000, 'Mouse and clickers gain +10 billion blue coins for every non-clicker clone owned', 400, 10000000000),
+            new Upgrade('Clicker XVIII', 1000000000000000000000, 'Mouse and clickers gain +1 trillion blue coins for every non-clicker clone owned', 450, 1000000000000),
+            new Upgrade('Clicker XIX', 25000000000000000000000000, 'Mouse and clickers gain +100 trillion blue coins for every non-clicker clone owned', 500, 100000000000000),
+            new Upgrade('Clicker XX', 5e30, 'Mouse and clickers gain +10 quadrillion blue coins for every non-clicker clone owned', 600, 10000000000000000)
         ], false),
         new Building('Power Clicker', 0, 0, [
             new Upgrade('Power Clicks I', 50000, 'Clicking efficiency is quadrupled', 0),
@@ -247,7 +252,12 @@ let game = {
             new Upgrade('Private XII', 1650000000, 'Privates are twice as efficient', 225),
             new Upgrade('Private XIII', 9750000000, 'Privates are twice as efficient', 250),
             new Upgrade('Private XIV', 137500000000, 'Privates are twice as efficient', 275),
-            new Upgrade('Private XV', 3000000000000, 'Privates are twice as efficient', 300)
+            new Upgrade('Private XV', 3000000000000, 'Privates are twice as efficient', 300),
+            new Upgrade('Private XVI', 400000000000000, 'Privates are twice as efficient', 350),
+            new Upgrade('Private XVII', 30000000000000000, 'Privates are twice as efficient', 400),
+            new Upgrade('Private XVIII', 1500000000000000000, 'Privates are twice as efficient', 450),
+            new Upgrade('Private XIX', 225000000000000000000, 'Privates are twice as efficient', 500),
+            new Upgrade('Private XX', 975000000000000000000000, 'Privates are twice as efficient', 600)
         ]),
         new Building('Commando', 250, 5, [
             new Upgrade('Commando I', 3500, 'Commandos are twice as efficient', 10),
@@ -301,7 +311,7 @@ let game = {
             new Upgrade('Marksman X', 30000000000, 'Marksmen are twice as efficient', 175),
             new Upgrade('Marksman XI', 125000000000, 'Marksmen are twice as efficient', 200)
         ]),
-        new Building('Rookie', 125000, 650, [
+        new Building('Rookie', 125000, 700, [
             new Upgrade('Rookie I', 1500000, 'Rookies are twice as efficient', 10),
             new Upgrade('Rookie II', 6250000, 'Rookies are twice as efficient', 20),
             new Upgrade('Rookie III', 20000000, 'Rookies are twice as efficient', 30),
@@ -327,7 +337,7 @@ let game = {
             new Upgrade('Defender X', 900000000000, 'Defenders are twice as efficient', 175),
             new Upgrade('Defender XI', 3250000000000, 'Defenders are twice as efficient', 200)
         ]),
-        new Building('Pyro', 2000000, 5250, [
+        new Building('Pyro', 2250000, 6000, [
             new Upgrade('Pyro I', 23500000, 'Pyros are twice as efficient', 10),
             new Upgrade('Pyro II', 67500000, 'Pyros are twice as efficient', 20),
             new Upgrade('Pyro III', 250000000, 'Pyros are twice as efficient', 30),
@@ -392,16 +402,42 @@ let game = {
             new Upgrade('Gunner X', 23750000000000000, 'Gunners are twice as efficient', 175),
             new Upgrade('Gunner XI', 60000000000000000, 'Gunners are twice as efficient', 200)
         ]),
-        new Building('UPCOMING', 1e303, 1000000000, [
-            new Upgrade('Medic I', 1e15, 'Medics are twice as efficient', 10),
-            new Upgrade('Medic II', 5e15, 'Medics are twice as efficient', 20),
-            new Upgrade('Medic III', 3e16, 'Medics are twice as efficient', 30),
-            new Upgrade('Medic IV', 2e17, 'Medics are twice as efficient', 40),
-            new Upgrade('Medic V', 1.5e18, 'Medics are twice as efficient', 50)
+        new Building('Medic', 5500000000, 4000000, [
+            new Upgrade('Medic I', 100000000000, 'Medics are twice as efficient', 10),
+            new Upgrade('Medic II', 650000000000, 'Medics are twice as efficient', 20),
+            new Upgrade('Medic III', 5850000000000, 'Medics are twice as efficient', 30),
+            new Upgrade('Medic IV', 27000000000000, 'Medics are twice as efficient', 40),
+            new Upgrade('Medic V', 125000000000000, 'Medics are twice as efficient', 50),
+            new Upgrade('Medic VI', 590000000000000, 'Medics are twice as efficient', 75),
+            new Upgrade('Medic VII', 2300000000000000, 'Medics are twice as efficient', 100),
+            new Upgrade('Medic VIII', 8790000000000000, 'Medics are twice as efficient', 125),
+            new Upgrade('Medic IX', 36850000000000000, 'Medics are twice as efficient', 150),
+            new Upgrade('Medic X', 108000000000000000, 'Medics are twice as efficient', 175),
+            new Upgrade('Medic XI', 445500000000000000, 'Medics are twice as efficient', 200)
+        ]),
+        new Building('Grenadier', 2750000000, 14000000, [
+            new Upgrade('Grenadier I', 500000000000, 'Grenadiers are twice as efficient', 10),
+            new Upgrade('Grenadier II', 3500000000000, 'Grenadiers are twice as efficient', 20),
+            new Upgrade('Grenadier III', 21500000000000, 'Grenadiers are twice as efficient', 30),
+            new Upgrade('Grenadier IV', 137500000000000, 'Grenadiers are twice as efficient', 40),
+            new Upgrade('Grenadier V', 825000000000000, 'Grenadiers are twice as efficient', 50),
+            new Upgrade('Grenadier VI', 4186000000000000, 'Grenadiers are twice as efficient', 75),
+            new Upgrade('Grenadier VII', 16897000000000000, 'Grenadiers are twice as efficient', 100),
+            new Upgrade('Grenadier VIII', 67775000000000000, 'Grenadiers are twice as efficient', 125),
+            new Upgrade('Grenadier IX', 250000000000000000, 'Grenadiers are twice as efficient', 150),
+            new Upgrade('Grenadier X', 800000000000000000, 'Grenadiers are twice as efficient', 175),
+            new Upgrade('Grenadier XI', 2800000000000000000, 'Grenadiers are twice as efficient', 200)
+        ]),
+        new Building('UPCOMING', 1e300, 1000000000, [
+            new Upgrade('Jetpack I', 1e18, 'Medics are twice as efficient', 10),
+            new Upgrade('Jetpack II', 5e18, 'Medics are twice as efficient', 20),
+            new Upgrade('Jetpack III', 3e19, 'Medics are twice as efficient', 30),
+            new Upgrade('Jetpack IV', 2e20, 'Medics are twice as efficient', 40),
+            new Upgrade('Jetpack V', 1.5e21, 'Medics are twice as efficient', 50)
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin'],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
