@@ -340,6 +340,39 @@ let game = {
             new Upgrade('Sapper IX', 190775000000000, 'Sappers are twice as efficient', 150),
             new Upgrade('Sapper X', 406250000000000, 'Sappers are twice as efficient', 175),
             new Upgrade('Sapper XI', 1230635700000000, 'Sappers are twice as efficient', 200)
+        ]),
+        new Building('Bazooka', 350000000, 325000, [
+            new Upgrade('Bazooka I', 6500000000, 'Bazookas are twice as efficient', 10),
+            new Upgrade('Bazooka II', 30000000000, 'Bazookas are twice as efficient', 20),
+            new Upgrade('Bazooka III', 200000000000, 'Bazookas are twice as efficient', 30),
+            new Upgrade('Bazooka IV', 850000000000, 'Bazookas are twice as efficient', 40),
+            new Upgrade('Bazooka V', 3625000000000, 'Bazookas are twice as efficient', 50),
+            new Upgrade('Bazooka VI', 13925000000000, 'Bazookas are twice as efficient', 75),
+            new Upgrade('Bazooka VII', 66600000000000, 'Bazookas are twice as efficient', 100),
+            new Upgrade('Bazooka VIII', 250000000000000, 'Bazookas are twice as efficient', 125),
+            new Upgrade('Bazooka IX', 830000000000000, 'Bazookas are twice as efficient', 150),
+            new Upgrade('Bazooka X', 2400000000000000, 'Bazookas are twice as efficient', 175),
+            new Upgrade('Bazooka XI', 7410580000000000, 'Bazookas are twice as efficient', 200)
+        ]),
+        new Building('Gunner', 1350000000, 1050000, [
+            new Upgrade('Gunner I', 29250000000, 'Gunners are twice as efficient', 10),
+            new Upgrade('Gunner II', 185000000000, 'Gunners are twice as efficient', 20),
+            new Upgrade('Gunner III', 1150000000000, 'Gunners are twice as efficient', 30),
+            new Upgrade('Gunner IV', 5250000000000, 'Gunners are twice as efficient', 40),
+            new Upgrade('Gunner V', 22500000000000, 'Gunners are twice as efficient', 50),
+            new Upgrade('Gunner VI', 77500000000000, 'Gunners are twice as efficient', 75),
+            new Upgrade('Gunner VII', 333000000000000, 'Gunners are twice as efficient', 100),
+            new Upgrade('Gunner VIII', 1250000000000000, 'Gunners are twice as efficient', 125),
+            new Upgrade('Gunner IX', 6500000000000000, 'Gunners are twice as efficient', 150),
+            new Upgrade('Gunner X', 23750000000000000, 'Gunners are twice as efficient', 175),
+            new Upgrade('Gunner XI', 60000000000000000, 'Gunners are twice as efficient', 200)
+        ]),
+        new Building('UPCOMING', Infinity, 1000000000, [
+            new Upgrade('Medic I', 1e15, 'Medics are twice as efficient', 10),
+            new Upgrade('Medic II', 5e15, 'Medics are twice as efficient', 20),
+            new Upgrade('Medic III', 3e16, 'Medics are twice as efficient', 30),
+            new Upgrade('Medic IV', 2e17, 'Medics are twice as efficient', 40),
+            new Upgrade('Medic V', 1.5e18, 'Medics are twice as efficient', 50)
         ])
     ],
     utilities: {
