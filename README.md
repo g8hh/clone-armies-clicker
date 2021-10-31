@@ -1,5 +1,5 @@
-# CloneClicker
-Clone Armies idle game by me.
+# Clone Armies Clicker
+Clone Armies idle game by me, because it is the best way to get rid of boredom by playing this simplistic incremental clone game
 
 Changelog:
 
