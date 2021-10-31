@@ -21,3 +21,10 @@ Version 1.1:
 
 Version 1.0:
 - First release of my game!
+
+
+Things that would be added in the future is:
+- Prestige
+- Skill Tree
+- More clones
+- New currencies
