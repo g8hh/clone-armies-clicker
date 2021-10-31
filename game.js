@@ -62,6 +62,9 @@ class Building {
                     if (this.name == 'Cursor') {
                         player.aMPC *= 2;
                     }
+                    if (this.name == 'Power Clicker') {
+                        player.aMPC *= 4;
+                    }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for grandmas as well.
@@ -212,6 +215,18 @@ let game = {
             new Upgrade('Clicker XIV', 1250000000000, 'Mouse and clickers gain +100,000 blue coins for every non-clicker clone owned', 275, 100000),
             new Upgrade('Clicker XV', 20000000000000, 'Mouse and clickers gain +1 million blue coins for every non-clicker clone owned', 300, 1000000)
         ], false),
+        new Building('Power Clicker', Infinity, 0, [
+            new Upgrade('Power Clicks I', 50000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks II', 250000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks III', 1500000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks IV', 5000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks V', 35000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks VI', 450000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks VII', 6500000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks VIII', 85000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks IX', 2750000000000, 'Clicking efficiency is quadrupled', 0),
+            new Upgrade('Power Clicks X', 500000000000000, 'Clicking efficiency is quadrupled', 0)
+        ]),
         new Building('Private', 100, 1, [
             new Upgrade('Private I', 1000, 'Privates are twice as efficent', 10),
             new Upgrade('Private II', 5000, 'Privates are twice as efficent', 20),
