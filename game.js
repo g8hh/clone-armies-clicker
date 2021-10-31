@@ -545,7 +545,7 @@ let game = {
                 game.player.cookieStats.Spent = 0;
                 game.player.cookieStats.Clicked = 0;
                 game.buildings.forEach(building => {
-                    if (building.name != 'Autoclicker') {
+                    if (building.name != 'Cursor') {
                         building.locked = true;
                     }
                     building.amount = 0;
@@ -557,7 +557,7 @@ let game = {
                     }
                 });
                 game.constructShop();
-                game.updateShop('Autoclicker');
+                game.updateShop('Cursor');
                 game.settings.recalculateCPS = true;
             }
         },
@@ -618,7 +618,7 @@ let game = {
         let format = game.utilities.formatNumber;
         let player = game.player;
         let stats = player.cookieStats;
-        document.title = 'Clone Armies Clicker | ' + format(player.cookies);
+        document.title = 'Cookie Clicker | ' + format(player.cookies);
         updateText('cookieDisplay', format(player.cookies));
         updateText('cpcDisplay', format(player.aMPC));
         updateText('cpsDisplay', format(player.aMPF * game.settings.frameRate));
@@ -636,7 +636,7 @@ let game = {
         });
         game.utilities.updateText('shopList', finalHtml);
     },
-    currentShop: 'Autoclicker',
+    currentShop: 'Cursor',
     updateShop (name) {
         game.currentShop = name;
         let finalHtml = '';
