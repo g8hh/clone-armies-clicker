@@ -332,7 +332,7 @@ let game = {
             new Upgrade('Pyro X', 2000000000000, 'Pyros are twice as efficient', 1),
             new Upgrade('Pyro XI', 7000000000000, 'Pyros are twice as efficient', 1)
         ]),
-        new Building('UPCOMING', Infinity, 0, [
+        new Building('UPCOMING', 1e308, 0, [
             new Upgrade('Antimony', 750000000000, 'Alchemy labs are twice as efficient', 1),
             new Upgrade('Essence of dough', 3750000000000, 'Alchemy labs are twice as efficient', 5),
             new Upgrade('True chocolate', 37500000000000, 'Alchemy labs are twice as efficient', 25),
