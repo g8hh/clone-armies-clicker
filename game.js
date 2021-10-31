@@ -54,22 +54,22 @@ class Building {
         let multiplier = 1;
         let buildingCount = game.utilities.getBuildingCount();
         this.specialCPS = 0;
-        if (this.name == 'Autoclicker') { game.player.aMPC = 1; }
+        if (this.name == 'Cursor') { game.player.aMPC = 1; }
         this.upgrades.forEach(upgrade => {
             if (upgrade.owned == true) {
                 if (upgrade.special == false) {
                     multiplier *= 2;
-                    if (this.name == 'Autoclicker') {
+                    if (this.name == 'Cursor') {
                         player.aMPC *= 2;
                     }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for grandmas as well.
                     switch (this.name) {
-                        case 'Autoclicker':
+                        case 'Cursor':
                             let nonCursorBuildingCount = buildingCount - this.amount;
                             this.specialCPS += (upgrade.special * nonCursorBuildingCount) * this.amount;
-                            player.aMPC += (upgrade.special * nonCursorBuildingCount);      
+                            player.aMPC += (upgrade.special * nonCursorBuildingCount);
                     }
                 }
             }
@@ -102,15 +102,12 @@ class Building {
         html += `<button onclick="game.buyBuilding('${this.name}', 1);">Buy x1</br><b>${format(this.cost)}</b></button>`
         html += `<button onclick="game.buyBuilding('${this.name}', 5);">Buy x5</br><b>${format(this.getCost(5))}</b></button>`;
         html += `<button onclick="game.buyBuilding('${this.name}', 10);">Buy x10</br><b>${format(this.getCost(10))}</b></button>`;
-        html += `<button onclick="game.buyBuilding('${this.name}', 25);">Buy x25</br><b>${format(this.getCost(25))}</b></button>`;
-        html += `<button onclick="game.buyBuilding('${this.name}', 50);">Buy x50</br><b>${format(this.getCost(50))}</b></button>`;
-        html += `<button onclick="game.buyBuilding('${this.name}', 100);">Buy x100</br><b>${format(this.getCost(100))}</b></button>`;
         html += '</div>';
         return html;
     }
 
     generateUpgradeButtons() {
-        let html = '':
+        let html = '';
         let notMet = false;
         this.upgrades.forEach(upgrade => {
             let format = game.utilities.formatNumber;
@@ -134,7 +131,7 @@ class Building {
         if (this.specialCPS > 0) {
             singleEffect += (this.specialCPS / this.amount);
         }
-        let html = `<b>${this.name}</b></br>You have <b>${this.amount}</b> ${this.name.toLowerCase()}(s).</br>Each ${this.name.toLowerCase()} produces <b>${format(singleEffect)}</b> blue coin(s).</br>All of your ${this.name.toLowerCase()}(s) combined produces <b>${format(this.effect)}</b> blue coin(s).</br>${this.generateBuyButtons()}</br>${this.generateUpgradeButtons()}`;
+        let html = `<b>${this.name}</b></br>You have <b>${this.amount}</b> ${this.name.toLowerCase()}(s).</br>Each ${this.name.toLowerCase()} produces <b>${format(singleEffect)}</b> cookie(s).</br>All of your ${this.name.toLowerCase()}(s) combined produces <b>${format(this.effect)}</b> cookie(s).</br>${this.generateBuyButtons()}</br>${this.generateUpgradeButtons()}`;
         return html;
     }
 }
@@ -195,230 +192,156 @@ let game = {
     },
     buildings: [
         // Generate all buildings here
-        new Building('Autoclicker', 10, 0.1, [
+        new Building('Cursor', 10, 0.1, [
             new Upgrade('Clicker I', 100, 'Autoclickers and clicking are twice as efficient', 1),
-            new Upgrade('Clicker II', 300, 'Autoclickers and clicking are twice as efficient', 1),
-            new Upgrade('Clicker III', 1000, 'Autoclickers and clicking are twice as efficient', 1),
-            new Upgrade('Clicker IV', 4000, 'Autoclickers and clicking are twice as efficient', 1),
-            new Upgrade('Clicker V', 15000, 'Autoclickers and clicking are twice as efficient', 1),
-            new Upgrade('Clicker VI', 50000, 'Mouse and clickers gain +1 blue coin for every non-clicker clone owned', 1, 1),
-            new Upgrade('Clicker VII', 250000, 'Mouse and clickers gain +5 blue coins for every non-clicker clone owned', 1, 5),
-            new Upgrade('Clicker VIII', 1000000, 'Mouse and clickers gain +10 blue coins for every non-clicker clone owned', 1, 10),
-            new Upgrade('Clicker IX', 7500000, 'Mouse and clickers gain +25 blue coins for every non-clicker clone owned', 1, 25),
-            new Upgrade('Clicker X', 50000000, 'Mouse and clickers gain +100 blue coins for every non-clicker clone owned', 1, 100),
-            new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 1, 500)
+            new Upgrade('Clicker II', 500, 'Autoclickers and clicking are twice as efficient', 10),
+            new Upgrade('Clicker III', 1000, 'Autoclickers and clicking are twice as efficient', 20),
+            new Upgrade('Clicker IV', 5000, 'Autoclickers and clicking are twice as efficient', 35),
+            new Upgrade('Clicker V', 15000, 'Autoclickers and clicking are twice as efficient', 50),
+            new Upgrade('Clicker VI', 50000, 'Mouse and clickers gain +1 blue coin for every non-clicker clone owned', 75, 1),
+            new Upgrade('Clicker VII', 250000, 'Mouse and clickers gain +5 blue coins for every non-clicker clone owned', 100, 5),
+            new Upgrade('Clicker VIII', 1000000, 'Mouse and clickers gain +10 blue coins for every non-clicker clone owned', 125, 10),
+            new Upgrade('Clicker IX', 7500000, 'Mouse and clickers gain +25 blue coins for every non-clicker clone owned', 150, 25),
+            new Upgrade('Clicker X', 50000000, 'Mouse and clickers gain +100 blue coins for every non-clicker clone owned', 175, 100),
+            new Upgrade('Clicker XI', 625000000, 'Mouse and clickers gain +500 blue coins for every non-clicker clone owned', 200, 500),
+            new Upgrade('Clicker XII', 7500000000, 'Mouse and clickers gain +1,000 blue coins for every non-clicker clone owned', 225, 1000),
+            new Upgrade('Clicker XIII', 67500000000, 'Mouse and clickers gain +10,000 blue coins for every non-clicker clone owned', 250, 10000),
+            new Upgrade('Clicker XIV', 1250000000000, 'Mouse and clickers gain +100,000 blue coins for every non-clicker clone owned', 275, 100000),
+            new Upgrade('Clicker XV', 20000000000000, 'Mouse and clickers gain +1 million blue coins for every non-clicker clone owned', 300, 1000000)
         ], false),
         new Building('Private', 100, 1, [
-            new Upgrade('Private I', 1000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private II', 5000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private III', 15000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private IV', 50000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private V', 200000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private VI', 500000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private VII', 2500000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private VIII', 10000000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private IX', 35000000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private X', 92500000, 'Privates are twice as efficent', 1),
-            new Upgrade('Private XI', 275000000, 'Privates are twice as efficent', 1)
+            new Upgrade('Private I', 1000, 'Privates are twice as efficent', 10),
+            new Upgrade('Private II', 5000, 'Privates are twice as efficent', 20),
+            new Upgrade('Private III', 15000, 'Privates are twice as efficent', 30),
+            new Upgrade('Private IV', 50000, 'Privates are twice as efficent', 40),
+            new Upgrade('Private V', 200000, 'Privates are twice as efficent', 50),
+            new Upgrade('Private VI', 500000, 'Privates are twice as efficent', 75),
+            new Upgrade('Private VII', 2500000, 'Privates are twice as efficent', 100),
+            new Upgrade('Private VIII', 10000000, 'Privates are twice as efficent', 125),
+            new Upgrade('Private IX', 35000000, 'Privates are twice as efficent', 150),
+            new Upgrade('Private X', 92500000, 'Privates are twice as efficent', 175),
+            new Upgrade('Private XI', 275000000, 'Privates are twice as efficent', 200)
         ]),
         new Building('Commando', 250, 5, [
-            new Upgrade('Commando I', 3500, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando II', 17500, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando III', 60000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando IV', 300000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando V', 1000000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando VI', 4000000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando VII', 12500000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando VIII', 50000000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando IX', 250000000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando X', 750000000, 'Commandos are twice as efficent', 1),
-            new Upgrade('Commando XI', 3000000000, 'Commandos are twice as efficent', 1)
+            new Upgrade('Commando I', 3500, 'Commandos are twice as efficent', 10),
+            new Upgrade('Commando II', 17500, 'Commandos are twice as efficent', 20),
+            new Upgrade('Commando III', 60000, 'Commandos are twice as efficent', 30),
+            new Upgrade('Commando IV', 300000, 'Commandos are twice as efficent', 40),
+            new Upgrade('Commando V', 1000000, 'Commandos are twice as efficent', 50),
+            new Upgrade('Commando VI', 4000000, 'Commandos are twice as efficent', 75),
+            new Upgrade('Commando VII', 12500000, 'Commandos are twice as efficent', 100),
+            new Upgrade('Commando VIII', 50000000, 'Commandos are twice as efficent', 125),
+            new Upgrade('Commando IX', 250000000, 'Commandos are twice as efficent', 150),
+            new Upgrade('Commando X', 750000000, 'Commandos are twice as efficent', 175),
+            new Upgrade('Commando XI', 3000000000, 'Commandos are twice as efficent', 200)
         ]),
         new Building('Cadet', 1000, 15, [
-            new Upgrade('Cadet I', 12500, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet II', 50000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet III', 225000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet IV', 800000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet V', 4000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet VI', 13000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet VII', 42000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet VIII', 175000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet IX', 725000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet X', 2250000000, 'Cadets are twice as efficient', 1),
-            new Upgrade('Cadet XI', 10000000000, 'Cadets are twice as efficient', 1)
+            new Upgrade('Cadet I', 12500, 'Cadets are twice as efficient', 10),
+            new Upgrade('Cadet II', 50000, 'Cadets are twice as efficient', 20),
+            new Upgrade('Cadet III', 225000, 'Cadets are twice as efficient', 30),
+            new Upgrade('Cadet IV', 800000, 'Cadets are twice as efficient', 40),
+            new Upgrade('Cadet V', 4000000, 'Cadets are twice as efficient', 50),
+            new Upgrade('Cadet VI', 13000000, 'Cadets are twice as efficient', 75),
+            new Upgrade('Cadet VII', 42000000, 'Cadets are twice as efficient', 100),
+            new Upgrade('Cadet VIII', 175000000, 'Cadets are twice as efficient', 125),
+            new Upgrade('Cadet IX', 725000000, 'Cadets are twice as efficient', 150),
+            new Upgrade('Cadet X', 2250000000, 'Cadets are twice as efficient', 175),
+            new Upgrade('Cadet XI', 10000000000, 'Cadets are twice as efficient', 200)
         ]),
         new Building('Infantry', 5000, 50, [
-            new Upgrade('Infantry I', 60000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry II', 225000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry III', 750000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry IV', 3000000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry V', 12750000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry VI', 47500000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry VII', 135000000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry VIII', 550000000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry IX', 1750000000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry X', 6500000000, 'Infantrymen are twice as efficient', 1),
-            new Upgrade('Infantry XI', 35000000000, 'Infantrymen are twice as efficient', 1)
+            new Upgrade('Infantry I', 60000, 'Infantrymen are twice as efficient', 10),
+            new Upgrade('Infantry II', 225000, 'Infantrymen are twice as efficient', 20),
+            new Upgrade('Infantry III', 750000, 'Infantrymen are twice as efficient', 30),
+            new Upgrade('Infantry IV', 3000000, 'Infantrymen are twice as efficient', 40),
+            new Upgrade('Infantry V', 12750000, 'Infantrymen are twice as efficient', 50),
+            new Upgrade('Infantry VI', 47500000, 'Infantrymen are twice as efficient', 75),
+            new Upgrade('Infantry VII', 135000000, 'Infantrymen are twice as efficient', 100),
+            new Upgrade('Infantry VIII', 550000000, 'Infantrymen are twice as efficient', 125),
+            new Upgrade('Infantry IX', 1750000000, 'Infantrymen are twice as efficient', 150),
+            new Upgrade('Infantry X', 6500000000, 'Infantrymen are twice as efficient', 175),
+            new Upgrade('Infantry XI', 35000000000, 'Infantrymen are twice as efficient', 200)
         ]),
         new Building('Marksman', 30000, 200, [
-            new Upgrade('Marksman I', 400000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman II', 1375000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman III', 5250000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman IV', 20000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman V', 90000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman VI', 250000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman VII', 825000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman VIII', 3250000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman IX', 8750000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman X', 30000000000, 'Marksmen are twice as efficient', 1),
-            new Upgrade('Marksman XI', 125000000000, 'Marksmen are twice as efficient', 1)
+            new Upgrade('Marksman I', 400000, 'Marksmen are twice as efficient', 10),
+            new Upgrade('Marksman II', 1375000, 'Marksmen are twice as efficient', 20),
+            new Upgrade('Marksman III', 5250000, 'Marksmen are twice as efficient', 30),
+            new Upgrade('Marksman IV', 20000000, 'Marksmen are twice as efficient', 40),
+            new Upgrade('Marksman V', 90000000, 'Marksmen are twice as efficient', 50),
+            new Upgrade('Marksman VI', 250000000, 'Marksmen are twice as efficient', 75),
+            new Upgrade('Marksman VII', 825000000, 'Marksmen are twice as efficient', 100),
+            new Upgrade('Marksman VIII', 3250000000, 'Marksmen are twice as efficient', 125),
+            new Upgrade('Marksman IX', 8750000000, 'Marksmen are twice as efficient', 150),
+            new Upgrade('Marksman X', 30000000000, 'Marksmen are twice as efficient', 175),
+            new Upgrade('Marksman XI', 125000000000, 'Marksmen are twice as efficient', 200)
         ]),
         new Building('Rookie', 125000, 650, [
-            new Upgrade('Rookie I', 1500000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie II', 6250000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie III', 20000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie IV', 100000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie V', 400000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie VI', 1300000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie VII', 6000000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie VIII', 16000000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie IX', 50000000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie X', 175000000000, 'Rookies are twice as efficient', 1),
-            new Upgrade('Rookie XI', 725000000000, 'Rookies are twice as efficient', 1)
+            new Upgrade('Rookie I', 1500000, 'Rookies are twice as efficient', 10),
+            new Upgrade('Rookie II', 6250000, 'Rookies are twice as efficient', 20),
+            new Upgrade('Rookie III', 20000000, 'Rookies are twice as efficient', 30),
+            new Upgrade('Rookie IV', 100000000, 'Rookies are twice as efficient', 40),
+            new Upgrade('Rookie V', 400000000, 'Rookies are twice as efficient', 50),
+            new Upgrade('Rookie VI', 1300000000, 'Rookies are twice as efficient', 75),
+            new Upgrade('Rookie VII', 6000000000, 'Rookies are twice as efficient', 100),
+            new Upgrade('Rookie VIII', 16000000000, 'Rookies are twice as efficient', 125),
+            new Upgrade('Rookie IX', 50000000000, 'Rookies are twice as efficient', 150),
+            new Upgrade('Rookie X', 175000000000, 'Rookies are twice as efficient', 175),
+            new Upgrade('Rookie XI', 725000000000, 'Rookies are twice as efficient', 200)
         ]),
         new Building('Defender', 750000, 2750, [
-            new Upgrade('Defender I', 8250000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender II', 27500000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender III', 100000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender IV', 350000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender V', 1150000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender VI', 4750000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender VII', 22500000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender VIII', 65000000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender IX', 250000000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender X', 900000000000, 'Defenders are twice as efficient', 1),
-            new Upgrade('Defender XI', 3250000000000, 'Defenders are twice as efficient', 1)
+            new Upgrade('Defender I', 8250000, 'Defenders are twice as efficient', 10),
+            new Upgrade('Defender II', 27500000, 'Defenders are twice as efficient', 20),
+            new Upgrade('Defender III', 100000000, 'Defenders are twice as efficient', 30),
+            new Upgrade('Defender IV', 350000000, 'Defenders are twice as efficient', 40),
+            new Upgrade('Defender V', 1150000000, 'Defenders are twice as efficient', 50),
+            new Upgrade('Defender VI', 4750000000, 'Defenders are twice as efficient', 75),
+            new Upgrade('Defender VII', 22500000000, 'Defenders are twice as efficient', 100),
+            new Upgrade('Defender VIII', 65000000000, 'Defenders are twice as efficient', 125),
+            new Upgrade('Defender IX', 250000000000, 'Defenders are twice as efficient', 150),
+            new Upgrade('Defender X', 900000000000, 'Defenders are twice as efficient', 175),
+            new Upgrade('Defender XI', 3250000000000, 'Defenders are twice as efficient', 200)
         ]),
         new Building('Pyro', 2000000, 5250, [
-            new Upgrade('Pyro I', 23500000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro II', 67500000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro III', 250000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro IV', 875000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro V', 2600000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro VI', 10000000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro VII', 32500000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro VIII', 122500000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro IX', 500000000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro X', 2000000000000, 'Pyros are twice as efficient', 1),
-            new Upgrade('Pyro XI', 7000000000000, 'Pyros are twice as efficient', 1)
+            new Upgrade('Pyro I', 23500000, 'Pyros are twice as efficient', 10),
+            new Upgrade('Pyro II', 67500000, 'Pyros are twice as efficient', 20),
+            new Upgrade('Pyro III', 250000000, 'Pyros are twice as efficient', 30),
+            new Upgrade('Pyro IV', 875000000, 'Pyros are twice as efficient', 40),
+            new Upgrade('Pyro V', 2600000000, 'Pyros are twice as efficient', 50),
+            new Upgrade('Pyro VI', 10000000000, 'Pyros are twice as efficient', 75),
+            new Upgrade('Pyro VII', 32500000000, 'Pyros are twice as efficient', 100),
+            new Upgrade('Pyro VIII', 122500000000, 'Pyros are twice as efficient', 125),
+            new Upgrade('Pyro IX', 500000000000, 'Pyros are twice as efficient', 150),
+            new Upgrade('Pyro X', 2000000000000, 'Pyros are twice as efficient', 175),
+            new Upgrade('Pyro XI', 7000000000000, 'Pyros are twice as efficient', 200)
         ]),
-        new Building('UPCOMING', 1e308, 0, [
-            new Upgrade('Antimony', 750000000000, 'Alchemy labs are twice as efficient', 1),
-            new Upgrade('Essence of dough', 3750000000000, 'Alchemy labs are twice as efficient', 5),
-            new Upgrade('True chocolate', 37500000000000, 'Alchemy labs are twice as efficient', 25),
-            new Upgrade('Ambrosia', 3750000000000000, 'Alchemy labs are twice as efficient', 50),
-            new Upgrade('Aqua crustulae', 375000000000000000, 'Alchemy labs are twice as efficient', 100),
-            new Upgrade('Origin crucible', 37500000000000000000, 'Alchemy labs are twice as efficient', 150),
-            new Upgrade('Theory of atomic fluidity', 37500000000000000000000, 'Alchemy labs are twice as efficient', 200),
-            new Upgrade('Beige goo', 37500000000000000000000000, 'Alchemy labs are twice as efficient', 250),
-            new Upgrade('The advent of chemistry', 37500000000000000000000000000, 'Alchemy labs are twice as efficient', 300),
-            new Upgrade('On second thought', 37500000000000000000000000000000, 'Alchemy labs are twice as efficient', 350),
-            new Upgrade('Public betterment', 375000000000000000000000000000000000, 'Alchemy labs are twice as efficient', 400)
-        ]),
-        new Building('Portal', 1000000000000, 10000000, [
-            new Upgrade('Ancient tablet', 10000000000000, 'Portals are twice as efficient', 1),
-            new Upgrade('Insane oatling workers', 50000000000000, 'Portals are twice as efficient', 5),
-            new Upgrade('Soul bond', 500000000000000, 'Portals are twice as efficient', 25),
-            new Upgrade('Sanity dance', 50000000000000000, 'Portals are twice as efficient', 50),
-            new Upgrade('Brane transplant', 5000000000000000000, 'Portals are twice as efficient', 100),
-            new Upgrade('Deity-sized portals', 500000000000000000000, 'Portals are twice as efficient', 150),
-            new Upgrade('End of times back-up plan', 500000000000000000000000, 'Portals are twice as efficient', 200),
-            new Upgrade('Maddening chants', 500000000000000000000000000, 'Portals are twice as efficient', 250),
-            new Upgrade('The real world', 500000000000000000000000000000, 'Portals are twice as efficient', 300),
-            new Upgrade('Dimensional garbage gulper', 500000000000000000000000000000000, 'Portals are twice as efficient', 350),
-            new Upgrade('Embedded microportals', 5000000000000000000000000000000000000, 'Portals are twice as efficient', 400)
-        ]),
-        new Building('Time Machine', 14000000000000, 65000000, [
-            new Upgrade('Flux capacitors', 140000000000000, 'Time machines are twice as efficient', 1),
-            new Upgrade('Time paradox resolver', 700000000000000, 'Time machines are twice as efficient', 5),
-            new Upgrade('Quantum conundrum', 7000000000000000, 'Time machines are twice as efficient', 25),
-            new Upgrade('Causality enforcer', 700000000000000000, 'Time machines are twice as efficient', 50),
-            new Upgrade('Yestermorrow comparators', 70000000000000000000, 'Time machines are twice as efficient', 100),
-            new Upgrade('Far future enactment', 7000000000000000000000, 'Time machines are twice as efficient', 150),
-            new Upgrade('Great loop hypothesis', 7000000000000000000000000, 'Time machines are twice as efficient', 200),
-            new Upgrade('Cookietopian moments of maybe', 7000000000000000000000000000, 'Time machines are twice as efficient', 250),
-            new Upgrade('Second seconds', 7000000000000000000000000000000, 'Time machines are twice as efficient', 300),
-            new Upgrade('Additional clock hands', 7000000000000000000000000000000000, 'Time machines are twice as efficient', 350),
-            new Upgrade('Nostalgia', 70000000000000000000000000000000000000, 'Time machines are twice as efficient', 400)
-        ]),
-        new Building('Antimatter Condenser', 170000000000000, 430000000, [
-            new Upgrade('Sugar bosons', 1700000000000000, 'Antimatter condensers are twice as efficient', 1),
-            new Upgrade('String theory', 8500000000000000, 'Antimatter condensers are twice as efficient', 5),
-            new Upgrade('Large macaron collider', 85000000000000000, 'Antimatter condensers are twice as efficient', 25),
-            new Upgrade('Big bang bake', 8500000000000000000, 'Antimatter condensers are twice as efficient', 50),
-            new Upgrade('Reverse cyclotrons', 850000000000000000000, 'Antimatter condensers are twice as efficient', 100),
-            new Upgrade('Nanocosmics', 85000000000000000000000, 'Antimatter condensers are twice as efficient', 150),
-            new Upgrade('The Pulse', 85000000000000000000000000, 'Antimatter condensers are twice as efficient', 200),
-            new Upgrade('Some other super-tiny fundamental particle? Probably?', 85000000000000000000000000000, 'Antimatter condensers are twice as efficient', 250),
-            new Upgrade('Quantum comb', 85000000000000000000000000000000, 'Antimatter condensers are twice as efficient', 300),
-            new Upgrade('Baking Nobel prize', 85000000000000000000000000000000000, 'Antimatter condensers are twice as efficient', 350),
-            new Upgrade('The definite molecule', 850000000000000000000000000000000000000, 'Antimatter condensers are twice as efficient', 400)
-        ]),
-        new Building('Prism', 2100000000000000, 2900000000, [
-            new Upgrade('Gem polish', 21000000000000000, 'Prims are twice as efficient', 1),
-            new Upgrade('9th color', 105000000000000000, 'Prims are twice as efficient', 5),
-            new Upgrade('Chocolate light', 1050000000000000000, 'Prims are twice as efficient', 25),
-            new Upgrade('Grainbow', 105000000000000000000, 'Prims are twice as efficient', 50),
-            new Upgrade('Pure cosmic light', 10500000000000000000000, 'Prims are twice as efficient', 100),
-            new Upgrade('Glow-in-the-dark', 1050000000000000000000000, 'Prims are twice as efficient', 150),
-            new Upgrade('Lux sanctorum', 1050000000000000000000000000, 'Prims are twice as efficient', 200),
-            new Upgrade('Reverse shadows', 1050000000000000000000000000000, 'Prims are twice as efficient', 250),
-            new Upgrade('Crystal mirrors', 1050000000000000000000000000000000, 'Prims are twice as efficient', 300),
-            new Upgrade('Reverse theory of light', 1050000000000000000000000000000000000, 'Prisms are twice as efficient', 350),
-            new Upgrade('Light capture measures', 10500000000000000000000000000000000000000, 'Prisms are twice as efficient', 400)
-        ]),
-        new Building('Chancemaker', 26000000000000000, 21000000000, [
-            new Upgrade('Your lucky cookie', 260000000000000000, 'Chancemakers are twice as efficient', 1),
-            new Upgrade('\'All Bets Are Off\' magic coin', 130000000000000000, 'Chancemakers are twice as efficient', 5),
-            new Upgrade('Winning lottery ticket', 13000000000000000000, 'Chancemakers are twice as efficient', 25),
-            new Upgrade('Four-leaf clover field', 130000000000000000000, 'Chancemakers are twice as efficient', 50),
-            new Upgrade('A recipe book about books', 13000000000000000000000, 'Chancemakers are twice as efficient', 100),
-            new Upgrade('Leprechaun village', 13000000000000000000000000, 'Chancemakers are twice as efficient', 150),
-            new Upgrade('Improbability drive', 13000000000000000000000000000, 'Chancemakers are twice as efficient', 200),
-            new Upgrade('Antisuperstistronics', 13000000000000000000000000000000, 'Chancemakers are twice as efficient', 250),
-            new Upgrade('Bunnypedes', 13000000000000000000000000000000000, 'Chancemakers are twice as efficient', 300),
-            new Upgrade('Revised probalistics', 13000000000000000000000000000000000000, 'Chancemakers are twice as efficient', 350),
-            new Upgrade('0-sided dice', 130000000000000000000000000000000000000000, 'Chancemakers are twice as efficient', 400)
-        ]),
-        new Building('Fractal Engine', 310000000000000000, 150000000000, [
-            new Upgrade('Metabakeries', 3100000000000000000, 'Fractal engines are twice as efficient', 1),
-            new Upgrade('Mandelbrown sugar', 15500000000000000000, 'Fractal engines are twice as efficient', 5),
-            new Upgrade('Fractoids', 155000000000000000000, 'Fractal engines are twice as efficient', 25),
-            new Upgrade('Nested universe theory', 15500000000000000000000, 'Fractal engines are twice as efficient', 50),
-            new Upgrade('Menger sponge cake', 1550000000000000000000000, 'Fractal engines are twice as efficient', 100),
-            new Upgrade('One particularly good-humoured cow', 155000000000000000000000000, 'Fractal engines are twice as efficient', 150),
-            new Upgrade('Chocolate ouroboros', 155000000000000000000000000000, 'Fractal engines are twice as efficient', 200),
-            new Upgrade('Nested', 155000000000000000000000000000000, 'Fractal engines are twice as efficient', 250),
-            new Upgrade('Space-filling fibers', 155000000000000000000000000000000000, 'Fractal engines are twice as efficient', 300),
-            new Upgrade('Endless book of prose', 155000000000000000000000000000000000000, 'Fractal engines are twice as efficient', 350),
-            new Upgrade('The set of all sets', 1550000000000000000000000000000000000000000, 'Fractal engines are twice as efficient', 400)
-        ]),
-        new Building('Java Console', 71000000000000000000, 1100000000000, [
-            new Upgrade('The JavaScript console for dummies', 710000000000000000000, 'Java consoles are twice as efficient', 1),
-            new Upgrade('64bit Arrays', 3550000000000000000000, 'Java consoles are twices as efficient', 5),
-            new Upgrade('Stack overflow', 35500000000000000000000, 'Java consoles are twice as efficient', 25),
-            new Upgrade('Enterprise compiler', 3550000000000000000000000, 'Java consoles are twice as efficient', 50),
-            new Upgrade('Syntactic sugar', 355000000000000000000000000, 'Java consoles are twice as efficient', 100),
-            new Upgrade('A nice cup of coffee', 35500000000000000000000000000, 'Java consoles are twice as efficient', 150),
-            new Upgrade('Just-in-time baking', 35500000000000000000000000000000, 'Java consoles are twice as efficient', 200),
-            new Upgrade('cookies++', 35500000000000000000000000000000000, 'Java consoles are twice as efficient', 250),
-            new Upgrade('Software updates', 35500000000000000000000000000000000000, 'Java consoles are twice as efficient', 300),
-            new Upgrade('Game.Loop', 35500000000000000000000000000000000000000, 'Java consoles are twice as efficient', 350),
-            new Upgrade('eval()', 355000000000000000000000000000000000000000000, 'Java consoles are twice as efficient', 400)
+        new Building('Butcher', 15000000, 22500, [
+            new Upgrade('Butcher I', 325000000, 'Butchers are twice as efficient', 10),
+            new Upgrade('Butcher II', 1450000000, 'Butchers are twice as efficient', 20),
+            new Upgrade('Butcher III', 16500000000, 'Butchers are twice as efficient', 30),
+            new Upgrade('Butcher IV', 59250000000, 'Butchers are twice as efficient', 40),
+            new Upgrade('Butcher V', 313000000000, 'Butchers are twice as efficient', 50),
+            new Upgrade('Butcher VI', 1040000000000, 'Butchers are twice as efficient', 75),
+            new Upgrade('Butcher VII', 4200000000000, 'Butchers are twice as efficient', 100),
+            new Upgrade('Butcher VIII', 15100000000000, 'Butchers are twice as efficient', 125),
+            new Upgrade('Butcher IX', 58700000000000, 'Butchers are twice as efficient', 150),
+            new Upgrade('Butcher X', 125000000000000, 'Butchers are twice as efficient', 175),
+            new Upgrade('Butcher XI', 312900000000000, 'Butchers are twice as efficient', 200)
+        ])
+        new Building('Sapper', 75000000, 87500, [
+            new Upgrade('Sapper I', 1543750000, 'Sappers are twice as efficient', 10),
+            new Upgrade('Sapper II', 6887500000, 'Sappers are twice as efficient', 20),
+            new Upgrade('Sapper III', 74250000000, 'Sappers are twice as efficient', 30),
+            new Upgrade('Sapper IV', 311062500000, 'Sappers are twice as efficient', 40),
+            new Upgrade('Sapper V', 1565000000000, 'Sappers are twice as efficient', 50),
+            new Upgrade('Sapper VI', 4357000000000, 'Sappers are twice as efficient', 75),
+            new Upgrade('Sapper VII', 14700000000000, 'Sappers are twice as efficient', 100),
+            new Upgrade('Sapper VIII', 56625000000000, 'Sappers are twice as efficient', 125),
+            new Upgrade('Sapper IX', 190775000000000, 'Sappers are twice as efficient', 150),
+            new Upgrade('Sapper X', 406250000000000, 'Sappers are twice as efficient', 175),
+            new Upgrade('Sapper XI', 1230635700000000, 'Sappers are twice as efficient', 200)
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vigin'],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
