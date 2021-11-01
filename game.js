@@ -420,7 +420,7 @@ let game = {
             new Upgrade('Medic X', 108000000000000000, 'Medics are twice as efficient', 175),
             new Upgrade('Medic XI', 445500000000000000, 'Medics are twice as efficient', 200)
         ]),
-        new Building('Grenadier', 2750000000, 14000000, [
+        new Building('Grenadier', 27500000000, 14000000, [
             new Upgrade('Grenadier I', 500000000000, 'Grenadiers are twice as efficient', 10),
             new Upgrade('Grenadier II', 3500000000000, 'Grenadiers are twice as efficient', 20),
             new Upgrade('Grenadier III', 21500000000000, 'Grenadiers are twice as efficient', 30),
