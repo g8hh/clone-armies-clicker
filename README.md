@@ -3,6 +3,14 @@ Clone Armies idle game by me, because it is the best way to get rid of boredom b
 
 Changelog:
 
+Version 1.4
+- **Medic** and **Grenadier** has arrived to the Incremental Cloning Universe!
+- Power Clicks is back with 20 awesome upgrades
+- We've extended the number of upgrades for **Private** from 11 to 21!
+- More cursor upgrades available
+- More number suffixes has been added
+- Balance changes
+
 Version 1.3
 - New clones: **Butcher, Sapper, Bazooka and Gunner!**
 - Removed Power Clicks, because it broke the game :(
