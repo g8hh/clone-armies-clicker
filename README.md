@@ -9,6 +9,7 @@ Version 1.4
 - We've extended the number of upgrades for **Private** from 11 to 21!
 - More cursor upgrades available
 - More number suffixes has been added
+- New font
 - Balance changes
 
 Version 1.3
@@ -36,3 +37,4 @@ Things that would be added in the future is:
 - Skill Tree
 - More clones
 - New currencies
+- Toolbars
