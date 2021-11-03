@@ -55,7 +55,7 @@ h1 {
 
 .cookieButton img:hover {
     width:512px;
-    height:295px;
+    height:256px;
     transform: translateY(2px);
 }
 
