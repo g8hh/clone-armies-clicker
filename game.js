@@ -469,7 +469,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', '', '', '', '', '', '', '', '', '', '', ''],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', '', '', '', '', '', '', '', '', '', '', ''],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
