@@ -11,10 +11,11 @@
 	<audio autoplay loop>
                 <source src="https://github.com/CloneBloons/CloneArmiesClicker/blob/main/menuLoop.wav?raw=true" type="audio/wav">
         </audio>
+	<audio src="Assets/upgrade.ogg" type="audio/ogg"></audio>
 	<div class="saving">
 		<button class="import" onclick="game.saving.openBox('import')">Import</button>
 		<button class="export" onclick="game.saving.openBox('export')">Export</button>
-	  <button class="export wipe" onclick="game.saving.wipeSave()">Wipe Save</button>
+	        <button class="export wipe" onclick="game.saving.wipeSave()">Wipe Save</button>
 	</div>
 	<div class="importExportBox">
 		<div>
@@ -32,12 +33,10 @@
 		<div class="shop"></div>
 	</div>
 	<div class="prestigeContainer">
-		<div class="prestigeList"></div>
-		<div class="prestige"></div>
+		<button class="prestige" onclick="game.prestige('prestige')">Prestige</button>
 	</div>
 	<div class="settingsContainer">
-		<div class="settingsList"></div>
-		<div class="settings"></div>
+		<button class="settings" onclick="game.settings('settings')">Settings</button>
 	</div>
 	<!-- <li>Blue Coins : <b class="cookieDisplay">0</b></li>
 	<li>Blue coins per click : <b class="cpcDisplay">0</b></li>
