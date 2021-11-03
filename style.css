@@ -177,8 +177,9 @@ button.upgBtn:active {
 
 .discord {
     position:absolute;
-    width:65%;
-    left:35%;
+    width: 75px;
+    height: 75px;
+    left: 25px;
 }
 
 .saving {
