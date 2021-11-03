@@ -55,6 +55,11 @@ h1 {
     height:256px;
 }
 
+.bluecoin.png {
+    width:32px;
+    height:32px;
+}
+
 .cookieButton img:hover {
     width:512px;
     height:295px;
