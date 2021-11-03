@@ -6,7 +6,7 @@ Changelog:
 Version 1.5
 - New clones that have joined the Clickerverse of Clone Armies is: **Engineer, Sniper and Striker!**
 - Added a Toolbar for Settings and the all-new Prestige feature ready to come in game pretty soon
-- More upgrades added for Commando, 
+- More upgrades added for Commando, Cadet, Infantryman, Marksman and Rookie!
 - Cost multiplier changes for some clones
 - More number suffixes has been added
 - Texture overhaul
