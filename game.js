@@ -65,6 +65,9 @@ class Building {
             if (upgrade.owned == true) {
                 if (upgrade.special == false) {
                     multiplier *= 2;
+                    if (this.name == 'Commando') {
+                        multiplier *= 3;
+                    }
                     if (this.name == 'Cursor') {
                         player.aMPC *= 2;
                     }
