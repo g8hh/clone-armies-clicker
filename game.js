@@ -25,11 +25,17 @@ class Building {
                     nextBuilding.locked = false;
                     game.constructShop();
                 }
+                if (this.name == 'Commando') {
+                    this.cost = Math.round(this.cost * Math.pow(1.25, amount));
+                }
             }
         }
     }
 
     setCost() {
+        if (this.name == 'Commando') {
+           this.cost = Math.round(this.cost * 1.25);
+        }
         this.cost = this.originalCost;
         for (let i = 0; i < this.amount; i++) {
             this.cost = Math.round(this.cost * 1.15);
@@ -89,6 +95,9 @@ class Building {
     getCost(amount) {
         let bulkCost = this.cost;
         let tempPrice = this.cost;
+        if (this.name == 'Commando') {
+           bulkCost += Math.round(tempPrice *= 1.25);
+        }
         for (let i = 0; i < amount - 1; i++) {
             bulkCost += Math.round(tempPrice *= 1.15);
         }
