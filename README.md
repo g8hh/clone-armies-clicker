@@ -10,7 +10,7 @@ Version 1.5
 - Cost multiplier changes for some clones
 - More number suffixes has been added
 - Texture overhaul
-- Balance changes: The first upgrade now requires 1 clone to get! Upgrade costs reduced slightly for high-tier clones
+- Balance changes: The first upgrade now requires 1 clone to get! Upgrade costs reduced slightly for high-tier clones, added 1 new upgrade for all clones to compensate the new balance change for upgrades
 - Marksman has now took Rookie's place because he was high-level. How unfortunate.
 
 Version 1.4
