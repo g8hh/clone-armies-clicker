@@ -3,6 +3,16 @@ Clone Armies idle game by me, because it is the best way to get rid of boredom b
 
 Changelog:
 
+Version 1.5
+- New clones that have joined the Clickerverse of Clone Armies is: **Engineer, Sniper and Striker!**
+- Added a Toolbar for Settings and the all-new Prestige feature ready to come in game pretty soon
+- More upgrades added for Commando, 
+- Cost multiplier changes for some clones
+- More number suffixes has been added
+- Texture overhaul
+- Balance changes: The first upgrade now requires 1 clone to get! Upgrade costs reduced slightly for high-tier clones
+- Marksman has now took Rookie's place because he was high-level. How unfortunate.
+
 Version 1.4
 - **Medic** and **Grenadier** has arrived to the Incremental Cloning Universe!
 - Power Clicks is back with 20 awesome upgrades
