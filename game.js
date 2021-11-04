@@ -47,8 +47,10 @@ class Building {
         this.upgrades.forEach(upgrade => {
             if (upgrade.name == name) {
                 if (player.spendCookies(upgrade.cost) == true) {
+                    let upgradeSound = document.getElementById("upgradeSound");
                     upgrade.owned = true;
                     game.settings.recalculateCPS = true;
+                    upgradeSound.play();
                     return;
                 }
             }
@@ -481,7 +483,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', '', '', '', '', '', '', '', '', '', '', ''],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', 'UNo', 'DNo', 'TNo', 'QNo', 'QQNo', 'SNo', 'SSNo', 'ONo', 'NNo', 'Centillion', 'UnCent'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
@@ -709,11 +711,15 @@ let game = {
     },
     buyBuilding (name, amount) {
         let building = game.utilities.getBuildingByName(name);
+        let upgradeSound = document.getElementById("upgradeSound");
         building.buy(amount);
+        upgradeSound.play();
     },
     buyUpgrade (buildingName, upgrade) {
         let building = game.utilities.getBuildingByName(buildingName);
+        let upgradeSound = document.getElementById("upgradeSound");
         building.buyUpgrade(upgrade);
+        upgradeSound.play();
     },
     start () {
         // This prevents the user from holding down enter to click the cookie very quickly.
