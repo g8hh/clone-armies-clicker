@@ -478,7 +478,35 @@ let game = {
             new Upgrade('Engineer XI', 40000000000000000000, 'Engineers are twice as efficient', 175),
             new Upgrade('Engineer XII', 250000000000000000000, 'Engineers are twice as efficient', 200)
         ]),
-        new Building('UPCOMING', 1e300, 1000000000, [
+        new Building('Sniper', 1000000000000, 500000000, [
+            new Upgrade('Sniper I', 20000000000000, 'Snipers are twice as efficient', 1),
+            new Upgrade('Sniper II', 105000000000000, 'Snipers are twice as efficient', 10),
+            new Upgrade('Sniper III', 530000000000000, 'Snipers are twice as efficient', 20),
+            new Upgrade('Sniper IV', 3000000000000000, 'Snipers are twice as efficient', 30),
+            new Upgrade('Sniper V', 11500000000000000, 'Snipers are twice as efficient', 40),
+            new Upgrade('Sniper VI', 65000000000000000, 'Snipers are twice as efficient', 50),
+            new Upgrade('Sniper VII', 540000000000000000, 'Snipers are twice as efficient', 75),
+            new Upgrade('Sniper VIII', 3600000000000000000, 'Snipers are twice as efficient', 100),
+            new Upgrade('Sniper IX', 20000000000000000000, 'Snipers are twice as efficient', 125),
+            new Upgrade('Sniper X', 90000000000000000000, 'Snipers are twice as efficient', 150),
+            new Upgrade('Sniper XI', 400000000000000000000, 'Snipers are twice as efficient', 175),
+            new Upgrade('Sniper XII', 2500000000000000000000, 'Snipers are twice as efficient', 200)
+        ]),
+        new Building('Striker', 8000000000000, 5000000000, [
+            new Upgrade('Striker I', 180000000000000, 'Strikers are twice as efficient', 1),
+            new Upgrade('Striker II', 880000000000000, 'Strikers are twice as efficient', 10),
+            new Upgrade('Striker III', 4200000000000000, 'Strikers are twice as efficient', 20),
+            new Upgrade('Striker IV', 22000000000000000, 'Strikers are twice as efficient', 30),
+            new Upgrade('Striker V', 100000000000000000, 'Strikers are twice as efficient', 40),
+            new Upgrade('Striker VI', 600000000000000000, 'Strikers are twice as efficient', 50),
+            new Upgrade('Striker VII', 5000000000000000000, 'Strikers are twice as efficient', 75),
+            new Upgrade('Striker VIII', 30000000000000000000, 'Strikers are twice as efficient', 100),
+            new Upgrade('Striker IX', 180000000000000000000, 'Strikers are twice as efficient', 125),
+            new Upgrade('Striker X', 860000000000000000000, 'Strikers are twice as efficient', 150),
+            new Upgrade('Striker XI', 4000000000000000000000, 'Strikers are twice as efficient', 175),
+            new Upgrade('Striker XII', 25000000000000000000000, 'Strikers are twice as efficient', 200)
+        ]),
+        new Building('UPCOMING', Infinity, 1000000000000000000, [
             new Upgrade('Jetpack I', 1e18, 'Medics are twice as efficient', 1),
             new Upgrade('Jetpack II', 5e18, 'Medics are twice as efficient', 25),
             new Upgrade('Jetpack III', 3e19, 'Medics are twice as efficient', 50),
@@ -487,7 +515,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', 'UNo', 'DNo', 'TNo', 'QNo', 'QQNo', 'SNo', 'SSNo', 'ONo', 'NNo', 'Centillion', 'Uncentillion', 'Duocentillion', 'Trecentillion', 'Quattuorcentillion', 'Quincentillion', 'Sexcentillion', 'Septencentillion', 'Octocentillion', 'Novemcentillion', 'Decicentillion', 'Undecicentillion', 'Duodecicentillion', 'Tredecicentillion', 'Quattuordecicentillion', 'Quindecicentillion', 'Sexdecicentillion', 'Septendecicentillion', 'Octodecicentillion', 'Novemdecicentillion', 'Viginicentillion'],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', 'UNo', 'DNo', 'TNo', 'QNo', 'QQNo', 'SNo', 'SSNo', 'ONo', 'NNo', 'Centillion', 'Uncentillion', 'Duocentillion', 'Trecentillion', 'Quattuorcentillion', 'Quincentillion', 'Sexcentillion', 'Septencentillion', 'Octocentillion', 'Novemcentillion', 'Decicentillion', 'Undecicentillion', 'Duodecicentillion', 'Tredecicentillion', 'Quattuordecicentillion', 'Quindecicentillion', 'Sexdecicentillion', 'Septendecicentillion', 'Octodecicentillion', 'Novemdecicentillion', 'Viginicentillion', ''],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
