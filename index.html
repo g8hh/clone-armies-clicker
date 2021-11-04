@@ -4,16 +4,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" type="image/png" href="Assets/CloneArmiesFavicon.png"/>
     <title>Clone Armies Clicker</title>
 </head>
 <body>
 	<audio autoplay loop>
                 <source src="https://github.com/CloneBloons/CloneArmiesClicker/blob/main/menuLoop.wav?raw=true" type="audio/wav">
         </audio>
+	<audio src="Assets/upgrade.ogg" type="audio/ogg"></audio>
+	<a class="discord" href="https://discord.gg"><img src="Assets/discord.png" width="50" height="50"/></a>
 	<div class="saving">
 		<button class="import" onclick="game.saving.openBox('import')">Import</button>
 		<button class="export" onclick="game.saving.openBox('export')">Export</button>
-	  <button class="export wipe" onclick="game.saving.wipeSave()">Wipe Save</button>
+	        <button class="export wipe" onclick="game.saving.wipeSave()">Wipe Save</button>
 	</div>
 	<div class="importExportBox">
 		<div>
@@ -22,21 +25,19 @@
 		</div>
 	</div>
 	<div class="cookieContainer">
-		Blue Coins :<b class="cookieDisplay">0</b></br>
+		<img src="Assets/blueCoinIcon.png" width="32" height="32"/>Blue Coins : <b class="cookieDisplay">0</b></br>
 		bps : <b class="cpsDisplay">0</b> | bpc : <b class="cpcDisplay">0</b>
-		<button class="cookieButton"><img src="Generator.png"/></button>
+		<button class="cookieButton"><img src="Assets/Generator.png"/></button>
 	</div>
 	<div class="shopContainer">
 		<div class="shopList"></div>
 		<div class="shop"></div>
 	</div>
 	<div class="prestigeContainer">
-		<div class="prestigeList"></div>
-		<div class="prestige"></div>
+		Prestige
 	</div>
 	<div class="settingsContainer">
-		<div class="settingsList"></div>
-		<div class="settings"></div>
+		Settings
 	</div>
 	<!-- <li>Blue Coins : <b class="cookieDisplay">0</b></li>
 	<li>Blue coins per click : <b class="cpcDisplay">0</b></li>

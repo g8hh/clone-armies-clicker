@@ -25,11 +25,17 @@ class Building {
                     nextBuilding.locked = false;
                     game.constructShop();
                 }
+                if (this.name == 'Commando') {
+                    this.cost = Math.round(this.cost * Math.pow(1.25, amount));
+                }
             }
         }
     }
 
     setCost() {
+        if (this.name == 'Commando') {
+           this.cost = Math.round(this.cost * 1.25);
+        }
         this.cost = this.originalCost;
         for (let i = 0; i < this.amount; i++) {
             this.cost = Math.round(this.cost * 1.15);
@@ -59,6 +65,9 @@ class Building {
             if (upgrade.owned == true) {
                 if (upgrade.special == false) {
                     multiplier *= 2;
+                    if (this.name == 'Commando') {
+                        multiplier *= 3;
+                    }
                     if (this.name == 'Cursor') {
                         player.aMPC *= 2;
                     }
@@ -89,6 +98,9 @@ class Building {
     getCost(amount) {
         let bulkCost = this.cost;
         let tempPrice = this.cost;
+        if (this.name == 'Commando') {
+           bulkCost += Math.round(tempPrice *= 1.25);
+        }
         for (let i = 0; i < amount - 1; i++) {
             bulkCost += Math.round(tempPrice *= 1.15);
         }
@@ -420,10 +432,10 @@ let game = {
         ]),
         new Building('Medic', 5500000000, 4000000, [
             new Upgrade('Medic I', 100000000000, 'Medics are twice as efficient', 1),
-            new Upgrade('Medic II', 650000000000, 'Medics are twice as efficient', 10),
-            new Upgrade('Medic III', 5850000000000, 'Medics are twice as efficient', 20),
-            new Upgrade('Medic IV', 27000000000000, 'Medics are twice as efficient', 30),
-            new Upgrade('Medic V', 125000000000000, 'Medics are twice as efficient', 40),
+            new Upgrade('Medic II', 600000000000, 'Medics are twice as efficient', 10),
+            new Upgrade('Medic III', 4750000000000, 'Medics are twice as efficient', 20),
+            new Upgrade('Medic IV', 21000000000000, 'Medics are twice as efficient', 30),
+            new Upgrade('Medic V', 105000000000000, 'Medics are twice as efficient', 40),
             new Upgrade('Medic VI', 590000000000000, 'Medics are twice as efficient', 50),
             new Upgrade('Medic VII', 2300000000000000, 'Medics are twice as efficient', 75),
             new Upgrade('Medic VIII', 8790000000000000, 'Medics are twice as efficient', 100),
@@ -434,17 +446,31 @@ let game = {
         ]),
         new Building('Grenadier', 27500000000, 14000000, [
             new Upgrade('Grenadier I', 500000000000, 'Grenadiers are twice as efficient', 1),
-            new Upgrade('Grenadier II', 3500000000000, 'Grenadiers are twice as efficient', 10),
-            new Upgrade('Grenadier III', 21500000000000, 'Grenadiers are twice as efficient', 20),
-            new Upgrade('Grenadier IV', 137500000000000, 'Grenadiers are twice as efficient', 30),
-            new Upgrade('Grenadier V', 825000000000000, 'Grenadiers are twice as efficient', 40),
-            new Upgrade('Grenadier VI', 4186000000000000, 'Grenadiers are twice as efficient', 50),
+            new Upgrade('Grenadier II', 3000000000000, 'Grenadiers are twice as efficient', 10),
+            new Upgrade('Grenadier III', 19500000000000, 'Grenadiers are twice as efficient', 20),
+            new Upgrade('Grenadier IV', 107500000000000, 'Grenadiers are twice as efficient', 30),
+            new Upgrade('Grenadier V', 625000000000000, 'Grenadiers are twice as efficient', 40),
+            new Upgrade('Grenadier VI', 3186000000000000, 'Grenadiers are twice as efficient', 50),
             new Upgrade('Grenadier VII', 16897000000000000, 'Grenadiers are twice as efficient', 75),
             new Upgrade('Grenadier VIII', 67775000000000000, 'Grenadiers are twice as efficient', 100),
             new Upgrade('Grenadier IX', 250000000000000000, 'Grenadiers are twice as efficient', 125),
-            new Upgrade('Grenadier X', 800000000000000000, 'Grenadiers are twice as efficient', 150),
+            new Upgrade('Grenadier X',  800000000000000000, 'Grenadiers are twice as efficient', 150),
             new Upgrade('Grenadier XI', 2800000000000000000, 'Grenadiers are twice as efficient', 175),
             new Upgrade('Grenadier XII', 50000000000000000000, 'Grenadiers are twice as efficient', 200)
+        ]),
+        new Building('Engineer', 100000000000, 56000000, [
+            new Upgrade('Engineer I', 2000000000000, 'Engineers are twice as efficient', 1),
+            new Upgrade('Engineer II', 12000000000000, 'Engineers are twice as efficient', 10),
+            new Upgrade('Engineer III', 58000000000000, 'Engineers are twice as efficient', 20),
+            new Upgrade('Engineer IV', 330500000000000, 'Engineers are twice as efficient', 30),
+            new Upgrade('Engineer V', 1225000000000000, 'Engineers are twice as efficient', 40),
+            new Upgrade('Engineer VI', 7186000000000000, 'Engineers are twice as efficient', 50),
+            new Upgrade('Engineer VII', 56897000000000000, 'Engineers are twice as efficient', 75),
+            new Upgrade('Engineer VIII', 387750000000000000, 'Engineers are twice as efficient', 100),
+            new Upgrade('Engineer IX', 2000000000000000000, 'Engineers are twice as efficient', 125),
+            new Upgrade('Engineer X', 9000000000000000000, 'Engineers are twice as efficient', 150),
+            new Upgrade('Engineer XI', 40000000000000000000, 'Engineers are twice as efficient', 175),
+            new Upgrade('Engineer XII', 250000000000000000000, 'Engineers are twice as efficient', 200)
         ]),
         new Building('UPCOMING', 1e300, 1000000000, [
             new Upgrade('Jetpack I', 1e18, 'Medics are twice as efficient', 1),
@@ -455,7 +481,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin'],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', '', '', '', '', '', '', '', '', '', '', ''],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
@@ -464,7 +490,7 @@ let game = {
         },
         formatNumber (number) {
             let formatted = '';
-            if (number >= 1000) {
+            if (number >= 1000000) {
                 for (let i = 0; i < game.utilities.ShortNumbers.length; i++) {
                     let divider = Math.pow(10, (i + 1) * 3)
                     if (number >= divider) {
