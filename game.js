@@ -290,7 +290,9 @@ let game = {
             new Upgrade('Commando IX', 250000000, 'Commandos are twice as efficient', 125),
             new Upgrade('Commando X', 750000000, 'Commandos are twice as efficient', 150),
             new Upgrade('Commando XI', 3000000000, 'Commandos are twice as efficient', 175),
-            new Upgrade('Commando XII', 30000000000, 'Commandos are twice as efficient', 200)
+            new Upgrade('Commando XII', 30000000000, 'Commandos are twice as efficient', 200),
+            new Upgrade('Commando XIII', 600000000000, 'Commandos are twice as efficient', 225),
+            new Upgrade('Commando XIV', 9000000000000, 'Commandos are twice as efficient', 250)
         ]),
         new Building('Cadet', 1000, 15, [
             new Upgrade('Cadet I', 12500, 'Cadets are twice as efficient', 1),
@@ -304,7 +306,9 @@ let game = {
             new Upgrade('Cadet IX', 725000000, 'Cadets are twice as efficient', 125),
             new Upgrade('Cadet X', 2250000000, 'Cadets are twice as efficient', 150),
             new Upgrade('Cadet XI', 10000000000, 'Cadets are twice as efficient', 175),
-            new Upgrade('Cadet XII', 150000000000, 'Cadets are twice as efficient', 200)
+            new Upgrade('Cadet XII', 150000000000, 'Cadets are twice as efficient', 200),
+            new Upgrade('Cadet XIII', 2000000000000, 'Cadets are twice as efficient', 225),
+            new Upgrade('Cadet XIV', 25000000000000, 'Cadets are twice as efficient', 250)
         ]),
         new Building('Infantry', 5000, 50, [
             new Upgrade('Infantry I', 60000, 'Infantrymen are twice as efficient', 1),
@@ -483,7 +487,7 @@ let game = {
         ])
     ],
     utilities: {
-        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', 'UNo', 'DNo', 'TNo', 'QNo', 'QQNo', 'SNo', 'SSNo', 'ONo', 'NNo', 'Centillion', 'UnCent'],
+        ShortNumbers: ['K', 'M', 'B', 'T', 'Q', 'QQ', 'S', 'SS', 'O', 'N', 'D', 'U', 'DD', 'TD', 'QD', 'QQD', 'SD', 'SSD', 'OD', 'ND', 'Vig', 'UVi', 'DVi', 'TVi', 'QVi', 'QQVi', 'SVi', 'SSVi', 'OVi', 'NVi', 'Trigin', 'UTr', 'DTr', 'TTr', 'QTr', 'QQTr', 'STr', 'SSTr', 'OTr', 'NTr', 'Quadragin', 'UQu', 'DQu', 'TQu', 'QQu', 'QQQu', 'SQu', 'SSQu', 'OQu', 'NQu', 'Quinquag', 'UQi', 'DQi', 'TQi', 'QQi', 'QQQi', 'SQi', 'SSQi', 'OQi', 'NQi', 'Sexagin', 'USx', 'DSx', 'TSx', 'QSx', 'QQSx', 'SSx', 'SSSx', 'OSx', 'NSx', 'Septur', 'USp', 'DSp', 'TSp', 'QSp', 'QQSp', 'SSp', 'SSSp', 'OSp', 'NSp', 'Octogin', 'UOc', 'DOc', 'TOc', 'QOc', 'QQOc', 'SOc', 'SSOc', 'OOc', 'NOc', 'Nonagin', 'UNo', 'DNo', 'TNo', 'QNo', 'QQNo', 'SNo', 'SSNo', 'ONo', 'NNo', 'Centillion', 'Uncentillion', 'Duocentillion', 'Trecentillion', 'Quattuorcentillion', 'Quincentillion', 'Sexcentillion', 'Septencentillion', 'Octocentillion', 'Novemcentillion', 'Decicentillion'],
         updateText (className, text) {
             let elements = document.getElementsByClassName(className);
             for(var i in elements) {
