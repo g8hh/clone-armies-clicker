@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" type="image/png" href="Assets/CloneArmiesFavicon.png"/>
+    <title>Clone Armies Clicker</title>
+</head>
+<body>
+	<audio autoplay loop>
+                <source src="https://github.com/CloneBloons/CloneArmiesClicker/blob/main/menuLoop.wav?raw=true" type="audio/wav">
+        </audio>
+	<audio src="Assets/upgrade.ogg" id="upgradeSound"></audio>
+	<a class="discord" href="https://discord.gg/B5abK7Dw3f"><img src="Assets/discord.png" width="50" height="50"/></a>
+	<div class="saving">
+		<button class="import" onclick="game.saving.openBox('import')">Import</button>
+		<button class="export" onclick="game.saving.openBox('export')">Export</button>
+	        <button class="export wipe" onclick="game.saving.wipeSave()">Wipe Save</button>
+	</div>
+	<div class="importExportBox">
+		<div>
+			<textarea id="saveBox" maxlength="5000"></textarea>
+			<button onclick="game.saving.closeBox()">Close</button>
+		</div>
+	</div>
+	<div class="cookieContainer">
+		<img src="Assets/blueCoinIcon.png" width="32" height="32"/>Blue Coins : <b class="cookieDisplay">0</b></br>
+		bps : <b class="cpsDisplay">0</b> | bpc : <b class="cpcDisplay">0</b>
+		<button class="cookieButton"><img src="Assets/Generator.png"/></button>
+	</div>
+	<div class="shopContainer">
+		<div class="shopList"></div>
+		<div class="shop"></div>
+	</div>
+	<div id="prestigeContainer">
+		Prestige
+	</div>
+	<div ="settingsContainer">
+		Settings
+	</div>
+	<!-- <li>Blue Coins : <b class="cookieDisplay">0</b></li>
+	<li>Blue coins per click : <b class="cpcDisplay">0</b></li>
+	<li>Blue coins per sec : <b class="cpsDisplay">0</b></li>
+	<li>Earned : <b class="earnedDisplay">0</b></li>
+	<li>Spent : <b class="spentDisplay">0</b></li>
+	<li>Clicked : <b class="clickedDisplay">0</b></li> -->
+	<script src="base64.js"></script>
+	<script src="game.js"></script>
+	<script src="prestige.js"></script>
+	<script src="settings.js"></script>
+	<script src="Numbers/break_infinity.js"></script>
+</body>
+</html>

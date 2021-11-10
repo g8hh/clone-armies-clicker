@@ -1,0 +1,362 @@
+body {
+    color:blue;
+    background-image: url("Assets/CloneArmiesBackground.png");
+    background-color: #000000;
+    font-family:Facile Sans, sans-serif;
+    margin:0;
+}
+
+p {
+    font-family:Facile Sans, sans-serif;
+    margin:0;
+}
+
+h1 {
+    margin-bottom:0px;
+}
+
+.stats {
+    width:250px;
+    height:250px;
+    margin:auto;
+}
+
+.stats h1 {
+    margin:0;
+}
+
+.stats ul {
+    margin-top:0px;
+}
+
+.cookieContainer {
+    width: 100%;
+    height: 310px;
+    text-align:center;
+}
+
+.cookieButton {
+    background-color: transparent;
+    border:none;
+    outline:none;
+    padding:0;
+    margin:auto;
+    display:block;
+}
+
+.cookieContainer b#cookieDisplay {
+    font-size: 24px;
+}
+
+.cookieButton img {
+    width:512px;
+    height:256px;
+}
+
+.cookieButton img:hover {
+    width:512px;
+    height:256px;
+    transform: translateY(2px);
+}
+
+.cookieButton img:active {
+    width:512x;
+    height:256px;
+    transform: translateY(4px);
+}
+
+.shopList {
+    width:259px;
+    float:left;
+    clear:both;
+}
+
+.shopList button {
+    font-family:Facile Sans, sans-serif;
+    display:block;
+    width:85%;
+    max-width:220px;
+    margin:auto;
+    min-height:35px;
+    color:black;
+    background-color:rgb(66, 135, 245);
+    font-weight:bolder;
+    border: 2px solid rgb(38, 89, 171);
+    border-radius:5px;
+    outline:none;
+    box-shadow: 0px 3px rgb(22, 59, 120);
+}
+
+.shopList button:hover {
+    transform: translateY(1px);
+    box-shadow: 0px 2px rgb(22, 59, 120);
+}
+
+.shopList button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px rgb(22, 59, 120);
+}
+
+.shopList button:not(:last-child) {
+    margin-bottom:5px;
+}
+
+.shop {
+    float:left;
+    display:block;
+    width:450px;
+}
+
+.btnBuyGroup {
+    display:inline-block;
+    margin-top:5px;
+}
+
+.btnBuyGroup button {
+    font-family:Facile Sans, sans-serif;
+    width:120px;
+    margin-right:5px;
+    background-color:rgb(33, 171, 12);
+    border:2px solid rgb(27, 138, 10);
+    border-radius:5px;
+    outline:none;
+    color:blue;
+    box-shadow: 0px 3px rgb(18, 87, 7);
+    margin-bottom:7px;
+}
+
+.btnBuyGroup button:hover {
+    box-shadow: 0px 2px rgb(18, 87, 7);
+    transform: translateY(1px);
+}
+
+.btnBuyGroup button:active {
+    box-shadow: 0px 1px rgb(18, 87, 7);
+    transform: translateY(2px);
+}
+
+.shopContainer {
+    margin-top:30px;
+}
+
+button.upgBtn{
+    font-family:Facile Sans, sans-serif;
+    color:white;
+    background-color:rgb(214, 141, 4);
+    border: 2px solid rgb(171, 111, 0);
+    border-radius:5px;
+    outline:none;
+    box-shadow: 0px 3px rgb(130, 84, 0);
+    padding:10px 5px 10px 5px;
+    width: 150px;
+    margin-right:4px;
+    margin-bottom:7px;
+}
+
+button.upgBtn:hover {
+    box-shadow: 0px 2px rgb(130, 84, 0);
+    transform: translateY(1px);
+}
+
+button.upgBtn:active {
+    box-shadow: 0px 1px rgb(130, 84, 0);
+    transform: translateY(2px);
+}
+
+.upgNext {
+    font-family:Facile Sans, sans-serif;
+    color:white;
+    width:150px;
+    background-color: rgb(145, 145, 145);
+    border: 2px solid rgb(112, 112, 112);
+    border-radius:5px;
+    text-align:center;
+    padding: 10px;
+    box-shadow: 0px 3px rgb(89, 89, 89);
+}
+
+.discord {
+    position:absolute;
+    width: 75px;
+    height: 75px;
+    left: 25px;
+}
+
+.saving {
+    position:absolute;
+    width:100%;
+    left:5px;
+}
+
+.saving button {
+    font-family:Facile Sans, sans-serif;
+    width:100px;
+    float:left;
+    border: 2px solid rgb(0, 0, 0);
+    border-top:none;
+    border-radius:0px 0px 5px 5px;
+    margin-top:-2px;
+    height:27px;
+    line-height:25px;
+    outline:none;
+}
+
+.saving button.import {
+    border-radius:0px 0px 0px 5px;
+}
+
+.saving button.export {
+    border-radius: 0px 0px 5px 0px;
+}
+
+.saving button.import {
+    color:rgb(255, 255, 255);
+    background-color:rgb(33, 171, 12);
+    border-color:rgb(27, 138, 10);
+    box-shadow: 0px 3px rgb(18, 87, 7);
+    border-right:none;
+}
+
+.saving button.import:hover {
+    box-shadow: 0px 2px rgb(18, 87, 7);
+    transform: translateY(1px);
+}
+
+.saving button.import:active {
+    box-shadow: 0px 1px rgb(18, 87, 7);
+    transform: translateY(2px);
+}
+
+.saving button.export {
+    font-family:Facile Sans, sans-serif;
+    color:rgb(255, 255, 255);
+    background-color:rgb(158, 29, 29);
+    border-color: rgb(136, 25, 25);
+    box-shadow:0px 3px rgb(92, 16, 16);
+    border-left:none;
+}
+
+.saving button.export:hover {
+    box-shadow:0px 2px rgb(92, 16, 16);
+    transform: translateY(1px);
+}
+
+.saving button.export:active {
+    box-shadow:0px 1px rgb(92, 16, 16);
+    transform: translateY(2px);
+}
+
+.saving button.export.wipe {
+    position: absolute;
+    right:10px;
+    border-radius: 0px 0px 5px 5px;
+    border-left: 2px solid rgb(136, 25, 25);
+}
+
+.importExportBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.importExportBox div {
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-175px;
+    margin-left:-150px;
+    background-color:rgb(0, 0, 0);
+    border-radius:5px;
+}
+
+.importExportBox div textarea {
+    display: block;
+    width:282.5px;
+    height:290px;
+    margin-left:7.5px;
+    margin-top:7.5px;
+    border:none;
+    border-radius:3px;
+    outline:none;
+    resize:none;
+}
+
+.importExportBox div button {
+    width:150px;
+    height:30px;
+    margin-left:75px;
+    margin-top:7.5px;
+    border-radius:5px;
+    outline:none;
+    color:rgb(255, 255, 255);
+    background-color:rgb(158, 29, 29);
+    border-color: rgb(136, 25, 25);
+    box-shadow:0px 2px rgb(92, 16, 16);
+}
+
+.importExportBox div button:hover {
+    box-shadow:0px 1px rgb(92, 16, 16);
+    transform: translateY(1px);
+}
+
+.importExportBox div button:active {
+    box-shadow:0px 0px rgb(92, 16, 16);
+    transform: translateY(2px);
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .shopList button:not(:last-child) {
+        margin:auto;
+        margin-bottom:0px !important;
+        border-radius:5px 5px 0px 0px;
+    }
+
+    .shopList button:not(:first-child) {
+        border-radius:0px 0px 0px 0px;
+        border-top:none;
+    }
+
+    .shopList button:last-child {
+        border-radius: 0px 0px 5px 5px;
+        margin-bottom:10px;
+    }
+
+    .shopList button:hover {
+        background-color:rgb(53, 112, 207);
+        box-shadow:none;
+        transform: translateY(0px);
+    }
+
+    .shopList button:active {
+        background-color:rgb(41, 94, 179);
+        box-shadow:none;
+        transform: translateY(0px);
+    }
+
+    .shopList button {
+        box-shadow:none;
+    }
+
+    .shopList {
+        width:100%;
+    }
+    
+    .shop {
+        text-align: center;
+        width:100%;
+    }
+
+    .cookieContainer {
+        padding-top:40px;
+    }    
+
+    .saving button.export.wipe {
+        right:10px;
+    }
+
+}
