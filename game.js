@@ -24,18 +24,12 @@ class Building {
                 if (nextBuilding.locked == true) {
                     nextBuilding.locked = false;
                     game.constructShop();
-                }
-                if (this.name == 'Commando') {
-                    this.cost = Math.round(this.cost * Math.pow(1.25, amount));
-                }
+                }            
             }
         }
     }
 
     setCost() {
-        if (this.name == 'Commando') {
-           this.cost = Math.round(this.cost * 1.25);
-        }
         this.cost = this.originalCost;
         for (let i = 0; i < this.amount; i++) {
             this.cost = Math.round(this.cost * 1.15);
@@ -67,11 +61,32 @@ class Building {
             if (upgrade.owned == true) {
                 if (upgrade.special == false) {
                     multiplier *= 2;
-                    if (this.name == 'Commando') {
-                        multiplier *= 3;
-                    }
                     if (this.name == 'Cursor') {
                         player.aMPC *= 2;
+                    }
+                    if (this.name == 'Sapper') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Bazooka') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Gunner') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Medic') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Grenadier') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Engineer') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Sniper') {
+                        multiplier *= 1.5;
+                    }
+                    if (this.name == 'Striker') {
+                        multiplier *= 1.5;
                     }
                     if (this.name == 'Power Clicker') {
                         player.aMPC *= 4;
@@ -100,9 +115,6 @@ class Building {
     getCost(amount) {
         let bulkCost = this.cost;
         let tempPrice = this.cost;
-        if (this.name == 'Commando') {
-           bulkCost += Math.round(tempPrice *= 1.25);
-        }
         for (let i = 0; i < amount - 1; i++) {
             bulkCost += Math.round(tempPrice *= 1.15);
         }
@@ -395,116 +407,116 @@ let game = {
             new Upgrade('Butcher XII', 6666000000000000, 'Butchers are twice as efficient', 200)
         ]),
         new Building('Sapper', 75000000, 87500, [
-            new Upgrade('Sapper I', 1543750000, 'Sappers are twice as efficient', 1),
-            new Upgrade('Sapper II', 6887500000, 'Sappers are twice as efficient', 10),
-            new Upgrade('Sapper III', 74250000000, 'Sappers are twice as efficient', 20),
-            new Upgrade('Sapper IV', 311062500000, 'Sappers are twice as efficient', 30),
-            new Upgrade('Sapper V', 1565000000000, 'Sappers are twice as efficient', 40),
-            new Upgrade('Sapper VI', 4357000000000, 'Sappers are twice as efficient', 50),
-            new Upgrade('Sapper VII', 14700000000000, 'Sappers are twice as efficient', 75),
-            new Upgrade('Sapper VIII', 56625000000000, 'Sappers are twice as efficient', 100),
-            new Upgrade('Sapper IX', 190775000000000, 'Sappers are twice as efficient', 125),
-            new Upgrade('Sapper X', 406250000000000, 'Sappers are twice as efficient', 150),
-            new Upgrade('Sapper XI', 12306357000000000, 'Sappers are twice as efficient', 175),
-            new Upgrade('Sapper XII', 250000000000000000, 'Sappers are twice as efficient', 200)
+            new Upgrade('Sapper I', 1543750000, 'Sappers are three times as efficient', 1),
+            new Upgrade('Sapper II', 6887500000, 'Sappers are three times as efficient', 10),
+            new Upgrade('Sapper III', 74250000000, 'Sappers are three times as efficient', 20),
+            new Upgrade('Sapper IV', 311062500000, 'Sappers are three times as efficient', 30),
+            new Upgrade('Sapper V', 1565000000000, 'Sappers are three times as efficient', 40),
+            new Upgrade('Sapper VI', 4357000000000, 'Sappers are three times as efficient', 50),
+            new Upgrade('Sapper VII', 14700000000000, 'Sappers are three times as efficient', 75),
+            new Upgrade('Sapper VIII', 56625000000000, 'Sappers are three times as efficient', 100),
+            new Upgrade('Sapper IX', 190775000000000, 'Sappers are three times as efficient', 125),
+            new Upgrade('Sapper X', 406250000000000, 'Sappers are three times as efficient', 150),
+            new Upgrade('Sapper XI', 12306357000000000, 'Sappers are three times as efficient', 175),
+            new Upgrade('Sapper XII', 250000000000000000, 'Sappers are three times as efficient', 200)
         ]),
         new Building('Bazooka', 350000000, 325000, [
-            new Upgrade('Bazooka I', 6500000000, 'Bazookas are twice as efficient', 1),
-            new Upgrade('Bazooka II', 30000000000, 'Bazookas are twice as efficient', 10),
-            new Upgrade('Bazooka III', 200000000000, 'Bazookas are twice as efficient', 20),
-            new Upgrade('Bazooka IV', 850000000000, 'Bazookas are twice as efficient', 30),
-            new Upgrade('Bazooka V', 3625000000000, 'Bazookas are twice as efficient', 40),
-            new Upgrade('Bazooka VI', 13925000000000, 'Bazookas are twice as efficient', 50),
-            new Upgrade('Bazooka VII', 66600000000000, 'Bazookas are twice as efficient', 75),
-            new Upgrade('Bazooka VIII', 250000000000000, 'Bazookas are twice as efficient', 100),
-            new Upgrade('Bazooka IX', 830000000000000, 'Bazookas are twice as efficient', 125),
-            new Upgrade('Bazooka X', 2400000000000000, 'Bazookas are twice as efficient', 150),
-            new Upgrade('Bazooka XI', 23410580000000000, 'Bazookas are twice as efficient', 175),
-            new Upgrade('Bazooka XII', 700000000000000000, 'Bazookas are twice as efficient', 200)
+            new Upgrade('Bazooka I', 6500000000, 'Bazookas are three times as efficient', 1),
+            new Upgrade('Bazooka II', 30000000000, 'Bazookas are three times as efficient', 10),
+            new Upgrade('Bazooka III', 200000000000, 'Bazookas are three times as efficient', 20),
+            new Upgrade('Bazooka IV', 850000000000, 'Bazookas are three times as efficient', 30),
+            new Upgrade('Bazooka V', 3625000000000, 'Bazookas are three times as efficient', 40),
+            new Upgrade('Bazooka VI', 13925000000000, 'Bazookas are three times as efficient', 50),
+            new Upgrade('Bazooka VII', 66600000000000, 'Bazookas are three times as efficient', 75),
+            new Upgrade('Bazooka VIII', 250000000000000, 'Bazookas are three times as efficient', 100),
+            new Upgrade('Bazooka IX', 830000000000000, 'Bazookas are three times as efficient', 125),
+            new Upgrade('Bazooka X', 2400000000000000, 'Bazookas are three times as efficient', 150),
+            new Upgrade('Bazooka XI', 23410580000000000, 'Bazookas are three times as efficient', 175),
+            new Upgrade('Bazooka XII', 700000000000000000, 'Bazookas are three times as efficient', 200)
         ]),
         new Building('Gunner', 1350000000, 1050000, [
-            new Upgrade('Gunner I', 29250000000, 'Gunners are twice as efficient', 1),
-            new Upgrade('Gunner II', 185000000000, 'Gunners are twice as efficient', 10),
-            new Upgrade('Gunner III', 1150000000000, 'Gunners are twice as efficient', 20),
-            new Upgrade('Gunner IV', 5250000000000, 'Gunners are twice as efficient', 30),
-            new Upgrade('Gunner V', 22500000000000, 'Gunners are twice as efficient', 40),
-            new Upgrade('Gunner VI', 77500000000000, 'Gunners are twice as efficient', 50),
-            new Upgrade('Gunner VII', 333000000000000, 'Gunners are twice as efficient', 75),
-            new Upgrade('Gunner VIII', 1250000000000000, 'Gunners are twice as efficient', 100),
-            new Upgrade('Gunner IX', 6500000000000000, 'Gunners are twice as efficient', 125),
-            new Upgrade('Gunner X', 23750000000000000, 'Gunners are twice as efficient', 150),
-            new Upgrade('Gunner XI', 60000000000000000, 'Gunners are twice as efficient', 175),
-            new Upgrade('Gunner XII', 2500000000000000000, 'Gunners are twice as efficient', 200)
+            new Upgrade('Gunner I', 29250000000, 'Gunners are three times as efficient', 1),
+            new Upgrade('Gunner II', 185000000000, 'Gunners are three times as efficient', 10),
+            new Upgrade('Gunner III', 1150000000000, 'Gunners are three times as efficient', 20),
+            new Upgrade('Gunner IV', 5250000000000, 'Gunners are three times as efficient', 30),
+            new Upgrade('Gunner V', 22500000000000, 'Gunners are three times as efficient', 40),
+            new Upgrade('Gunner VI', 77500000000000, 'Gunners are three times as efficient', 50),
+            new Upgrade('Gunner VII', 333000000000000, 'Gunners are three times as efficient', 75),
+            new Upgrade('Gunner VIII', 1250000000000000, 'Gunners are three times as efficient', 100),
+            new Upgrade('Gunner IX', 6500000000000000, 'Gunners are three times as efficient', 125),
+            new Upgrade('Gunner X', 23750000000000000, 'Gunners are three times as efficient', 150),
+            new Upgrade('Gunner XI', 60000000000000000, 'Gunners are three times as efficient', 175),
+            new Upgrade('Gunner XII', 2500000000000000000, 'Gunners are three times as efficient', 200)
         ]),
         new Building('Medic', 5500000000, 4000000, [
-            new Upgrade('Medic I', 100000000000, 'Medics are twice as efficient', 1),
-            new Upgrade('Medic II', 600000000000, 'Medics are twice as efficient', 10),
-            new Upgrade('Medic III', 4750000000000, 'Medics are twice as efficient', 20),
-            new Upgrade('Medic IV', 21000000000000, 'Medics are twice as efficient', 30),
-            new Upgrade('Medic V', 105000000000000, 'Medics are twice as efficient', 40),
-            new Upgrade('Medic VI', 590000000000000, 'Medics are twice as efficient', 50),
-            new Upgrade('Medic VII', 2300000000000000, 'Medics are twice as efficient', 75),
-            new Upgrade('Medic VIII', 8790000000000000, 'Medics are twice as efficient', 100),
-            new Upgrade('Medic IX', 36850000000000000, 'Medics are twice as efficient', 125),
-            new Upgrade('Medic X', 108000000000000000, 'Medics are twice as efficient', 150),
-            new Upgrade('Medic XI', 445500000000000000, 'Medics are twice as efficient', 175),
-            new Upgrade('Medic XII', 10000000000000000000, 'Medics are twice as efficient', 200)
+            new Upgrade('Medic I', 100000000000, 'Medics are three times as efficient', 1),
+            new Upgrade('Medic II', 600000000000, 'Medics are three times as efficient', 10),
+            new Upgrade('Medic III', 4750000000000, 'Medics are three times as efficient', 20),
+            new Upgrade('Medic IV', 21000000000000, 'Medics are three times as efficient', 30),
+            new Upgrade('Medic V', 105000000000000, 'Medics are three times as efficient', 40),
+            new Upgrade('Medic VI', 590000000000000, 'Medics are three times as efficient', 50),
+            new Upgrade('Medic VII', 2300000000000000, 'Medics are three times as efficient', 75),
+            new Upgrade('Medic VIII', 8790000000000000, 'Medics are three times as efficient', 100),
+            new Upgrade('Medic IX', 36850000000000000, 'Medics are three times as efficient', 125),
+            new Upgrade('Medic X', 108000000000000000, 'Medics are three times as efficient', 150),
+            new Upgrade('Medic XI', 445500000000000000, 'Medics are three times as efficient', 175),
+            new Upgrade('Medic XII', 10000000000000000000, 'Medics are three times as efficient', 200)
         ]),
         new Building('Grenadier', 27500000000, 14000000, [
-            new Upgrade('Grenadier I', 500000000000, 'Grenadiers are twice as efficient', 1),
-            new Upgrade('Grenadier II', 3000000000000, 'Grenadiers are twice as efficient', 10),
-            new Upgrade('Grenadier III', 19500000000000, 'Grenadiers are twice as efficient', 20),
-            new Upgrade('Grenadier IV', 107500000000000, 'Grenadiers are twice as efficient', 30),
-            new Upgrade('Grenadier V', 625000000000000, 'Grenadiers are twice as efficient', 40),
-            new Upgrade('Grenadier VI', 3186000000000000, 'Grenadiers are twice as efficient', 50),
-            new Upgrade('Grenadier VII', 16897000000000000, 'Grenadiers are twice as efficient', 75),
-            new Upgrade('Grenadier VIII', 67775000000000000, 'Grenadiers are twice as efficient', 100),
-            new Upgrade('Grenadier IX', 250000000000000000, 'Grenadiers are twice as efficient', 125),
-            new Upgrade('Grenadier X',  800000000000000000, 'Grenadiers are twice as efficient', 150),
-            new Upgrade('Grenadier XI', 2800000000000000000, 'Grenadiers are twice as efficient', 175),
-            new Upgrade('Grenadier XII', 50000000000000000000, 'Grenadiers are twice as efficient', 200)
+            new Upgrade('Grenadier I', 500000000000, 'Grenadiers are three times as efficient', 1),
+            new Upgrade('Grenadier II', 3000000000000, 'Grenadiers are three times as efficient', 10),
+            new Upgrade('Grenadier III', 19500000000000, 'Grenadiers are three times as efficient', 20),
+            new Upgrade('Grenadier IV', 107500000000000, 'Grenadiers are three times as efficient', 30),
+            new Upgrade('Grenadier V', 625000000000000, 'Grenadiers are three times as efficient', 40),
+            new Upgrade('Grenadier VI', 3186000000000000, 'Grenadiers are three times as efficient', 50),
+            new Upgrade('Grenadier VII', 16897000000000000, 'Grenadiers are three times as efficient', 75),
+            new Upgrade('Grenadier VIII', 67775000000000000, 'Grenadiers are three times as efficient', 100),
+            new Upgrade('Grenadier IX', 250000000000000000, 'Grenadiers are three times as efficient', 125),
+            new Upgrade('Grenadier X',  800000000000000000, 'Grenadiers are three times as efficient', 150),
+            new Upgrade('Grenadier XI', 2800000000000000000, 'Grenadiers are three times as efficient', 175),
+            new Upgrade('Grenadier XII', 50000000000000000000, 'Grenadiers are three times as efficient', 200)
         ]),
         new Building('Engineer', 100000000000, 56000000, [
-            new Upgrade('Engineer I', 2000000000000, 'Engineers are twice as efficient', 1),
-            new Upgrade('Engineer II', 12000000000000, 'Engineers are twice as efficient', 10),
-            new Upgrade('Engineer III', 58000000000000, 'Engineers are twice as efficient', 20),
-            new Upgrade('Engineer IV', 330500000000000, 'Engineers are twice as efficient', 30),
-            new Upgrade('Engineer V', 1225000000000000, 'Engineers are twice as efficient', 40),
-            new Upgrade('Engineer VI', 7186000000000000, 'Engineers are twice as efficient', 50),
-            new Upgrade('Engineer VII', 56897000000000000, 'Engineers are twice as efficient', 75),
-            new Upgrade('Engineer VIII', 387750000000000000, 'Engineers are twice as efficient', 100),
-            new Upgrade('Engineer IX', 2000000000000000000, 'Engineers are twice as efficient', 125),
-            new Upgrade('Engineer X', 9000000000000000000, 'Engineers are twice as efficient', 150),
-            new Upgrade('Engineer XI', 40000000000000000000, 'Engineers are twice as efficient', 175),
-            new Upgrade('Engineer XII', 250000000000000000000, 'Engineers are twice as efficient', 200)
+            new Upgrade('Engineer I', 2000000000000, 'Engineers are three times as efficient', 1),
+            new Upgrade('Engineer II', 12000000000000, 'Engineers are three times as efficient', 10),
+            new Upgrade('Engineer III', 58000000000000, 'Engineers are three times as efficient', 20),
+            new Upgrade('Engineer IV', 330500000000000, 'Engineers are three times as efficient', 30),
+            new Upgrade('Engineer V', 1225000000000000, 'Engineers are three times as efficient', 40),
+            new Upgrade('Engineer VI', 7186000000000000, 'Engineers are three times as efficient', 50),
+            new Upgrade('Engineer VII', 56897000000000000, 'Engineers are three times as efficient', 75),
+            new Upgrade('Engineer VIII', 387750000000000000, 'Engineers are three times as efficient', 100),
+            new Upgrade('Engineer IX', 2000000000000000000, 'Engineers are three times as efficient', 125),
+            new Upgrade('Engineer X', 9000000000000000000, 'Engineers are three times as efficient', 150),
+            new Upgrade('Engineer XI', 40000000000000000000, 'Engineers are three times as efficient', 175),
+            new Upgrade('Engineer XII', 250000000000000000000, 'Engineers are three times as efficient', 200)
         ]),
         new Building('Sniper', 1000000000000, 500000000, [
-            new Upgrade('Sniper I', 20000000000000, 'Snipers are twice as efficient', 1),
-            new Upgrade('Sniper II', 105000000000000, 'Snipers are twice as efficient', 10),
-            new Upgrade('Sniper III', 530000000000000, 'Snipers are twice as efficient', 20),
-            new Upgrade('Sniper IV', 3000000000000000, 'Snipers are twice as efficient', 30),
-            new Upgrade('Sniper V', 11500000000000000, 'Snipers are twice as efficient', 40),
-            new Upgrade('Sniper VI', 65000000000000000, 'Snipers are twice as efficient', 50),
-            new Upgrade('Sniper VII', 540000000000000000, 'Snipers are twice as efficient', 75),
-            new Upgrade('Sniper VIII', 3600000000000000000, 'Snipers are twice as efficient', 100),
-            new Upgrade('Sniper IX', 20000000000000000000, 'Snipers are twice as efficient', 125),
-            new Upgrade('Sniper X', 90000000000000000000, 'Snipers are twice as efficient', 150),
-            new Upgrade('Sniper XI', 400000000000000000000, 'Snipers are twice as efficient', 175),
-            new Upgrade('Sniper XII', 2500000000000000000000, 'Snipers are twice as efficient', 200)
+            new Upgrade('Sniper I', 20000000000000, 'Snipers are three times as efficient', 1),
+            new Upgrade('Sniper II', 105000000000000, 'Snipers are three times as efficient', 10),
+            new Upgrade('Sniper III', 530000000000000, 'Snipers are three times as efficient', 20),
+            new Upgrade('Sniper IV', 3000000000000000, 'Snipers are three times as efficient', 30),
+            new Upgrade('Sniper V', 11500000000000000, 'Snipers are three times as efficient', 40),
+            new Upgrade('Sniper VI', 65000000000000000, 'Snipers are three times as efficient', 50),
+            new Upgrade('Sniper VII', 540000000000000000, 'Snipers are three times as efficient', 75),
+            new Upgrade('Sniper VIII', 3600000000000000000, 'Snipers are three times as efficient', 100),
+            new Upgrade('Sniper IX', 20000000000000000000, 'Snipers are three times as efficient', 125),
+            new Upgrade('Sniper X', 90000000000000000000, 'Snipers are three times as efficient', 150),
+            new Upgrade('Sniper XI', 400000000000000000000, 'Snipers are three times as efficient', 175),
+            new Upgrade('Sniper XII', 2500000000000000000000, 'Snipers are three times as efficient', 200)
         ]),
         new Building('Striker', 8000000000000, 5000000000, [
-            new Upgrade('Striker I', 180000000000000, 'Strikers are twice as efficient', 1),
-            new Upgrade('Striker II', 880000000000000, 'Strikers are twice as efficient', 10),
-            new Upgrade('Striker III', 4200000000000000, 'Strikers are twice as efficient', 20),
-            new Upgrade('Striker IV', 22000000000000000, 'Strikers are twice as efficient', 30),
-            new Upgrade('Striker V', 100000000000000000, 'Strikers are twice as efficient', 40),
-            new Upgrade('Striker VI', 600000000000000000, 'Strikers are twice as efficient', 50),
-            new Upgrade('Striker VII', 5000000000000000000, 'Strikers are twice as efficient', 75),
-            new Upgrade('Striker VIII', 30000000000000000000, 'Strikers are twice as efficient', 100),
-            new Upgrade('Striker IX', 180000000000000000000, 'Strikers are twice as efficient', 125),
-            new Upgrade('Striker X', 860000000000000000000, 'Strikers are twice as efficient', 150),
-            new Upgrade('Striker XI', 4000000000000000000000, 'Strikers are twice as efficient', 175),
-            new Upgrade('Striker XII', 25000000000000000000000, 'Strikers are twice as efficient', 200)
+            new Upgrade('Striker I', 180000000000000, 'Strikers are three times as efficient', 1),
+            new Upgrade('Striker II', 880000000000000, 'Strikers are three times as efficient', 10),
+            new Upgrade('Striker III', 4200000000000000, 'Strikers are three times as efficient', 20),
+            new Upgrade('Striker IV', 22000000000000000, 'Strikers are three times as efficient', 30),
+            new Upgrade('Striker V', 100000000000000000, 'Strikers are three times as efficient', 40),
+            new Upgrade('Striker VI', 600000000000000000, 'Strikers are three times as efficient', 50),
+            new Upgrade('Striker VII', 5000000000000000000, 'Strikers are three times as efficient', 75),
+            new Upgrade('Striker VIII', 30000000000000000000, 'Strikers are three times as efficient', 100),
+            new Upgrade('Striker IX', 180000000000000000000, 'Strikers are three times as efficient', 125),
+            new Upgrade('Striker X', 860000000000000000000, 'Strikers are three times as efficient', 150),
+            new Upgrade('Striker XI', 4000000000000000000000, 'Strikers are three times as efficient', 175),
+            new Upgrade('Striker XII', 25000000000000000000000, 'Strikers are three times as efficient', 200)
         ]),
         new Building('UPCOMING', Infinity, 1000000000000000000, [
             new Upgrade('Jetpack I', 1e18, 'Medics are twice as efficient', 1),
