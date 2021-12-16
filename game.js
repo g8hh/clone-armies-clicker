@@ -91,6 +91,9 @@ class Building {
                     if (this.name == 'Power Clicker') {
                         player.aMPC *= 4;
                     }
+                    if (this.name == 'Clone Amplifier') {
+                        this.specialCPS *= 2;
+                    }
                 } else {
                     // Special casing for all special types of upgrades
                     // There may at some point be more than just cursors here, as theres special stuff for clones as well.
@@ -405,6 +408,18 @@ let game = {
             new Upgrade('Butcher X', 125000000000000, 'Butchers are twice as efficient', 150),
             new Upgrade('Butcher XI', 312900000000000, 'Butchers are twice as efficient', 175),
             new Upgrade('Butcher XII', 6666000000000000, 'Butchers are twice as efficient', 200)
+        ]),
+        new Building('Clone Amplifier', 0, 0, [
+            new Upgrade('Powerful Clones I', 100000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones II', 1000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones III', 25000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones IV', 500000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones V', 12500000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones VI', 1000000000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones VII', 350000000000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones VIII', 75000000000000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones IX', 50000000000000000000000, 'All clones bluecoin producing efficiency is doubled', 0),
+            new Upgrade('Powerful Clones X', 100000000000000000000000000, 'All clones bluecoin producing efficiency is doubled', 0)
         ]),
         new Building('Sapper', 75000000, 87500, [
             new Upgrade('Sapper I', 1543750000, 'Sappers are three times as efficient', 1),
